@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <!-- View Tree: Path -->
+          <record id="hr_employee_general_register_allowance_view_tree" model="ir.ui.view">
+              <field name="name">hr.employee.allowance.register</field>
+              <field name="model">hr.employee.allowance.register</field>
+              <field name="priority">1</field>
+              <field name="arch" type="xml">
+                  <tree string="Employee Register Allowance " decoration-info="type=='view'">
+                      <field name="employee_id" string="Employee"/>
+                  </tree>
+              </field>
+          </record>
+
+    <!-- View Form: Path -->
+          <record id="hr_employee_general_register_allowance_view_form" model="ir.ui.view">
+              <field name="name">hr.employee.allowance.register</field>
+              <field name="model">hr.employee.allowance.register</field>
+              <field name="priority">1</field>
+              <field name="arch" type="xml">
+                  <form>
+                      <sheet>
+                          <div class="oe_title" colors="blue">
+                               <h1>
+                                   <label string="Allowance Register "/>
+                               </h1>
+                          </div>
+                              <group col = '2'>
+                                   <group>
+                                       <field name="employee_id" string="Employee"/>
+                                       <field name="allowance_ids" widget="many2many_checkboxes" string="Allowance" />
+                                  </group>
+                              </group>
+                      </sheet>
+                  </form>
+              </field>
+          </record>
+
+    <!-- actions opening views on models -->
+
+         <record id="hr_employee_register_allowance_general_action" model="ir.actions.act_window" >
+                <field name="name">Allowance Register</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">hr.employee.allowance.register</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                  <p class="oe_view_nocontent_create">
+                    Click to start a new register employee to Allowance .
+                  </p><p>
+                    A Allowance register  is an master to set allowance for employee.
+                  </p>
+                </field>
+         </record>
+
+         <menuitem
+                id="hr_employee_general_register_allowance_menu_action"
+                action="hr_employee_register_allowance_general_action"
+                parent="hr_employee_parent_allowance_menu_root"
+                sequence="1"
+                groups="base.group_no_one"/>
+        </data>
+</odoo>

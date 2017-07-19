@@ -1,0 +1,137 @@
+<odoo>
+    <data>
+        <!-- View Tree: Path -->
+        <record id="hr_employee_general_bpjs_view_tree" model="ir.ui.view">
+            <field name="name">hr.employee.general.bpjs</field>
+            <field name="model">hr.employee.general.bpjs</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Employee BPJS " decoration-info="type=='view'">
+                    <field name="complete_name" string="BPJS"/>
+                    <field name="contribution_employee_id" string=" Contribution Employee" />
+                    <field name="contribution_company_id" string="Contribution Company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_bpjs_contribution_value_view_tree" model="ir.ui.view">
+            <field name="name">hr.employee.bpjs.contribution.value</field>
+            <field name="model">hr.employee.bpjs.contribution.value</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="BPJS Value" editable='bottom'>
+                    <field name="name" string="Value"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- View Form: Path -->
+        <record id="hr_employee_general_bpjs_view_form" model="ir.ui.view">
+            <field name="name">hr.employee.general.bpjs</field>
+            <field name="model">hr.employee.general.bpjs</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" colors="blue">
+                             <h1>
+                                 <label string="BPJS Configuration "/>
+                             </h1>
+                        </div>
+                            <group col = '2'>
+                                 <group>
+                                     <field name="name" string="BPJS Name"/>
+                                     <field name="parent_id" string="Parent BPJS" />
+                                     <field name="type" string="Type"/>
+                                </group>
+                                <group>
+                                    <field name="type_contribution_employee" string="Employee"/>
+                                    <field name="type_contribution_company"  string="Company"/>
+                                    <field name="contribution_employee_id" string="Employee Contribution" attrs="{'invisible': ['|',('type_contribution_employee','=',False),('type','=','view')]}"/>
+                                    <field name="contribution_company_id" string="Company Contribution" attrs="{'invisible': ['|',('type_contribution_company','=',False),('type','=','view')]}"/>
+                                    <field name="penalty" string="Employee Penalty"  attrs="{'invisible': [('type','=','view')]}"/>
+                                </group>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- View Search: Path -->
+        <record id="hr_employee_general_bpjs_view_search" model="ir.ui.view">
+            <field name="name">hr.employee.general.bpjs</field>
+            <field name="model">hr.employee.general.bpjs</field>
+            <field name="arch" type="xml">
+                <search string="Search Employee BPJS">
+                    <field name="complete_name" string="Employee"/>
+                    <field name="contribution_employee_id" string="BPJS" />
+                    <field name="contribution_company_id" string="Company"/>
+                    <field name="type_contribution_employee" string="Employee"/>
+                    <field name="type_contribution_company" string="Company"/>
+                    <field name="parent_id" string="Parent BPJS" />
+                    <separator/>
+                    <group expand="0" string="Group By...">
+                        <filter string="BPJS Name" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'complete_name'}"/>
+                        <filter string="Employee Type" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'type_contribution_employee'}"/>
+                        <filter string="Company Type" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'type_contribution_company'}"/>
+                        <filter string="Parent" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'parent_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_employee_general_bpjs_action" model="ir.actions.act_window" >
+            <field name="name">BPJS Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.general.bpjs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="hr_employee_general_bpjs_view_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new BPJS Configuration.
+              </p><p>
+                A BPJS Configuration is an master to set bpjs for employee.
+              </p>
+            </field>
+        </record>
+
+        <record id="hr_employee_bpjs_contribution_value_action" model="ir.actions.act_window" >
+            <field name="name">BPJS Value</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.bpjs.contribution.value</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new BPJS Configuration Value.
+              </p><p>
+                A BPJS Configuration Value is an master to set bpjs contribution value for employee.
+              </p>
+            </field>
+        </record>
+
+        <!-- Menu: Path -->
+        <menuitem
+            id="hr_employee_configuration_bpjs_menu_root"
+            name="BPJS Configuration"
+            parent="hr.menu_human_resources_configuration"
+            sequence="3"
+            groups="base.group_no_one"/>
+
+        <menuitem
+            id="hr_employee_general_bpjs_menu_action"
+            name="BPJS Configuration"
+            parent="hr_employee_configuration_bpjs_menu_root"
+            action="hr_employee_general_bpjs_action"
+            sequence="10"
+        />
+        <menuitem
+            id="hr_employee_bpjs_contribution_value_menu_action"
+            name="BPJS Configuration Value"
+            parent="hr_employee_configuration_bpjs_menu_root"
+            action="hr_employee_bpjs_contribution_value_action"
+            sequence="10"
+        />
+    </data>
+</odoo>

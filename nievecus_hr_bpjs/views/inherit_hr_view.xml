@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_employee_form_bpjs_action_2">
+            <field name="name">BPJS Form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.form.bpjs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="hr_employee_form_bpjs_view_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new BPJS Form.
+              </p><p>
+                A BPJS Form is an instruction to set bpjs for employee.
+              </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_hr_employee_detail">
+            <field name="name">inherit HR employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[@class='oe_button_box']" position="inside">
+                     <button name="act_show_log_bpjs"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-usd"
+                                help="show all the bpjs for this employee"
+                                groups="hr.group_hr_manager">
+                                <field name="bpjs_count" widget="statinfo" string="BPJS"/>
+                     </button>
+                 </xpath>
+
+                 <xpath expr="//notebook/page[@name='personal_information']" position="after">
+                    <page string="BPJS Register">
+                        <group string="Employee BPJS Registration" name="employee_bpjs_type">
+                              <field name="bpjs_rel_ids" string="BPJS Register" widget="many2many_checkboxes"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

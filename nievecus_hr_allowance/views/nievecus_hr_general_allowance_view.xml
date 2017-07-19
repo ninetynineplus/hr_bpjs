@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <!-- View Tree: Path -->
+      <record id="hr_employee_general_allowance_view_tree" model="ir.ui.view">
+          <field name="name">hr.employee.general.allowance</field>
+          <field name="model">hr.employee.general.allowance</field>
+          <field name="priority">1</field>
+          <field name="arch" type="xml">
+              <tree string="Employee Allowance " decoration-info="type=='view'">
+                  <field name="complete_name" string="Allowance"/>
+              </tree>
+          </field>
+      </record>
+
+    <!-- View Form: Path -->
+      <record id="hr_employee_general_allowance_view_form" model="ir.ui.view">
+          <field name="name">hr.employee.general.allowance</field>
+          <field name="model">hr.employee.general.allowance</field>
+          <field name="priority">1</field>
+          <field name="arch" type="xml">
+              <form>
+                  <sheet>
+                      <div class="oe_title" colors="blue">
+                           <h1>
+                               <label string="Allowance Configuration "/>
+                           </h1>
+                      </div>
+                          <group col = '2'>
+                               <group>
+                                   <field name="name" string="Allowance Name"/>
+                                   <field name="parent_id" string="Allowance Parent" />
+                                   <field name="type_allowance" string="Allowance type"/>
+                                   <field name="type" string="Type"/>
+                              </group>
+                          </group>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+
+    <!-- actions opening views on models -->
+
+     <record id="hr_employee_allowance_general_action" model="ir.actions.act_window" >
+            <field name="name">Allowance Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.general.allowance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new Allowance Configuration Value.
+              </p><p>
+                A Allowance Configuration  is an master to set allowance for employee.
+              </p>
+            </field>
+     </record>
+
+     <menuitem
+            id="hr_employee_general_allowance_menu_action"
+            action="hr_employee_allowance_general_action"
+            parent="hr.menu_human_resources_configuration"
+            sequence="1"
+            groups="base.group_no_one"/>
+  </data>
+</odoo>

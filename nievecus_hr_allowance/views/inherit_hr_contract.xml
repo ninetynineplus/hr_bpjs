@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inherit_hr_contract_allowance">
+            <field name="name">inherit HR Contract</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='wage']" position="after">
+                     <field name="allowance_ids">
+                            <tree string="Allowance">
+                                <field name="allowance_id" string="Allowance"/>
+                                <field name="value" string="Value"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <group>
+                                            <field name="allowance_id" string="Allowance"/>
+                                           <label for="type"/>
+                                           <div>
+                                                <field name="attendance_type" class="oe_inline" string="Allowance"
+                                                       attrs="{'invisible':[('type_allowance','=',False)]}"/>
+                                                <field name="type" string="Employee" class="oe_inline" attrs="{'invisible':
+                                                ['|',('attendance_type','=','natt'),('type_allowance','=',False)]}"/>
+                                           </div>
+                                        </group>
+                                        <group>
+                                           <field name="value_attendance_day" string="Attendance Day" attrs="{'invisible':
+                                                ['|',('type_allowance','=',False),('type','!=','nfix')]}"/>
+                                           <field name="value_rate_day" string="Rate Day" attrs="{'invisible':
+                                                ['|',('type_allowance','=',False),('type','!=','fix')]}"/>
+                                           <field name="value_price" string="Allowance price"/>
+                                           <field name="value" string="Value"/>
+                                           <field name="type_allowance" string="Type Allowance" invisible="1"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                     </field>
+                     <field name="takehomepay" string="Take Home Pay"/>
+                 </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
