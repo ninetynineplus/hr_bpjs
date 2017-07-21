@@ -31,7 +31,8 @@
         # 'security/ir.model.access.csv',
         'views/nievecus_hr_form_bpjs_view.xml',
         'views/nievecus_hr_general_bpjs_view.xml',
-        'views/inherit_hr_view.xml'
+        'views/inherit_hr_view.xml',
+        'views/nievecus_hr_generate_bpjs_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
