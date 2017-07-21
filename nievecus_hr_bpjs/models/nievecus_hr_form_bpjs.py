@@ -57,6 +57,24 @@ class HrEmployeeBpjsForm(models.Model):
             return employee_id
 
     @api.multi
+    def get_employee_contract(self):
+        """
+        this method use to get employee last contract
+        :return: contract_id
+        """
+        EmployeeContract = self.env['hr.contract']
+        for contract in self:
+            employee_contract = EmployeeContract.search([('employee_id', '=', contract.employee_id.id)], limit=1,
+                                                        order='id desc')
+
+            if employee_contract:
+                contract_id = employee_contract.id
+            else:
+                contract_id = 0
+
+            return contract_id
+
+    @api.multi
     def get_list_of_bpjs(self):
         for record in self:
             """This method to get list of bpjs from rel_bpjs"""
@@ -76,12 +94,14 @@ class HrEmployeeBpjsForm(models.Model):
 
             return [i[0] for i in record.env.cr.fetchall()]
 
+
     _name = 'hr.employee.form.bpjs'
     _description = "this module to provide bpjs indonesia"
 
 
     bpjs_id = fields.Many2one('hr.employee.general.bpjs','Bpjs ID',domain=[('type','=','normal')])
-    contract_id = fields.Many2one('hr.contract','Employee Contract',compute='get_employee_last_contract',store=True)
+    contract_id = fields.Many2one('hr.contract','Employee Contract',
+                                  compute='compute_get_employee_last_contract',store=True)
     employee_id = fields.Many2one('hr.employee','Employee ID')
     company_id = fields.Many2one('res.company','Employee Company')
     job_id = fields.Many2one('hr.job','Employee Jobs',related="employee_id.job_id")
@@ -99,19 +119,12 @@ class HrEmployeeBpjsForm(models.Model):
 
     @api.multi
     @api.depends('employee_id')
-    def get_employee_last_contract(self):
+    def compute_get_employee_last_contract(self):
 
-        """get employee last contract"""
-
-        EmployeeContract = self.env['hr.contract']
+        """onchange value contract from  employee last contract"""
         for contract in self:
-            employee_contract = EmployeeContract.search([('employee_id', '=', contract.employee_id.id)], limit=1,
-                                                        order='id desc')
+            contract.contract_id = contract.get_employee_contract()
 
-            if employee_contract:
-                contract.contract_id = employee_contract.id
-            else:
-                contract.contract_id = 0
 
     @api.multi
     @api.depends('bpjs_id','take_home_pay')
@@ -170,32 +183,6 @@ class HrEmployeeBpjsForm(models.Model):
 
             item.take_home_pay = takehomepay
 
-    @api.multi
-    def generate_bpjs(self):
-        """ User control/checks upkeep entry by labour activity and cost figures"""
-
-        # Server action menu cannot limited by groups_id
-        if not self.user_has_groups('estate.group_manager'):
-            err_msg = _('You are not authorized to approve upkeep data')
-            raise ValidationError(err_msg)
-
-        # User confirm/approve on upkeep labour line
-        upkeep_list = []
-        upkeep_obj = self.env['estate.upkeep']
-        for record in self:
-            upkeep_id = upkeep_obj.search([('id', '=', record.upkeep_id.id),
-                                           ('state', '=', 'confirmed')])
-            if upkeep_id.id not in upkeep_list:
-                upkeep_list.append(upkeep_id.id)
-
-        # Only confirm upkeep with draft state
-        upkeep_ids = upkeep_obj.search([('id', 'in', upkeep_list)])
-        upkeep_ids.write({'state': 'approved'})
-
-        # Log confirm all action
-        confirm_date = datetime.today()
-        current_user = self.env.user
-        _logger.info(_('%s approved upkeep data at %s (server time)' % (current_user.name, confirm_date)))
 
 
 

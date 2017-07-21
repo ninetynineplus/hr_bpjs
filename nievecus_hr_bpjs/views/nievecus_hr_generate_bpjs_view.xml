@@ -1,0 +1,126 @@
+<odoo>
+    <data>
+         <!-- View Tree: Path -->
+        <record id="hr_employee_generate_bpjs_view_tree" model="ir.ui.view">
+            <field name="name">hr.generate.employee.bpjs</field>
+            <field name="model">hr.generate.employee.bpjs</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Generate BPJS " editable="bottom">
+                     <field name="name" string="Date Register BPJS"/>
+                     <field name="hr_employee_id" string="Employee"/>
+                     <field name="hr_employee_general_bpjs_id" string="BPJS" invisible="0"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- View Form: Path -->
+        <record id="hr_employee_generate_bpjs_view_form" model="ir.ui.view">
+            <field name="name">hr.generate.employee.bpjs</field>
+            <field name="model">hr.generate.employee.bpjs</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" colors="blue">
+                             <h1>
+                                 <label string="BPJS Generate"/>
+                             </h1>
+                        </div>
+                            <group col = '2'>
+                                 <group>
+                                     <field name="name" string="Date Register BPJS"/>
+                                     <field name="hr_employee_id" string="Employee"/>
+                                     <field name="hr_employee_general_bpjs_id" string="BPJS" invisible="0"/>
+                                </group>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_employee_bpjs_generate_view_search" model="ir.ui.view">
+            <field name="name">hr.generate.employee.bpjs</field>
+            <field name="model">hr.generate.employee.bpjs</field>
+            <field name="arch" type="xml">
+                <search string="Search Employee BPJS">
+                    <field name="name" string="Date Register BPJS"/>
+                    <field name="hr_employee_id" string="Employee"/>
+                    <field name="hr_employee_general_bpjs_id" string="BPJS" invisible="0"/>
+                    <separator/>
+                    <separator/>
+                    <filter name="filter_month" icon="terp-go-month" string="This Month"
+                            domain="[('name','&lt;=',(context_today()+relativedelta(day=31)).strftime('%%Y-%%m-%%d')),
+                            ('name','&gt;=',(context_today()-relativedelta(day=1)).strftime('%%Y-%%m-%%d'))]"/>
+                    <filter name="filter_year" icon="terp-go-year" string="This Year"
+                            domain="[('name','&lt;=',(context_today()+relativedelta(day=31, month=12)).strftime('%%Y-%%m-%%d')),
+                            ('name','&gt;=',(context_today()-relativedelta(day=1, month=1)).strftime('%%Y-%%m-%%d'))]"/>
+                    <separator/>
+                    <filter icon="terp-go-month" string="Previous Month"
+                            domain="[('name','&lt;=',(context_today()+relativedelta(months=0,day=1,days=-1)).strftime('%Y-%m-%d')),
+                            ('name','&gt;=',(context_today()+relativedelta(months=-1,day=1)).strftime('%Y-%m-%d'))]"/>
+                    <!-- Relativedelta required weeks, days and weekday -->
+                    <filter icon="terp-go-month" string="Previous Week"
+                            domain="[('name','&lt;=',(context_today()+relativedelta(weeks=-2, days=7, weekday=6)).strftime('%Y-%m-%d')),
+                            ('name','&gt;=',(context_today()+relativedelta(weeks=-2, days=1, weekday=0)).strftime('%Y-%m-%d'))]"/>
+                    <separator/>
+                    <group expand="0" string="Group By...">
+                        <filter name="by_month" string="Month"
+                                context="{'group_by': 'name:month'}"/>
+                        <filter name="by_week" string="Week"
+                                context="{'group_by': 'name:week'}"/>
+                        <filter name="by_date" string="Date"
+                                context="{'group_by': 'name:day'}"/>
+                        <filter string="Employee" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'hr_employee_id'}"/>
+                        <filter string="Employee BPJS" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'hr_employee_general_bpjs_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Approve All action through upkeep labour-->
+        <record model="ir.actions.server" id="hr_employee_bpjs_generate_all_action">
+            <field name="name">Generate All</field>
+            <field name="model_id" ref="nievecus_hr_bpjs.model_hr_generate_employee_bpjs"/>
+            <field name="code">
+                    action = env['hr.generate.employee.bpjs'].generate_all_employee_bpjs()
+            </field>
+        </record>
+
+         <record model="ir.values" id="hr_employee_bpjs_generate_all_action_menu">
+            <field name="model_id" ref="nievecus_hr_bpjs.model_hr_generate_employee_bpjs" />
+            <field name="name">Generate All Action</field>
+            <field name="key2">client_action_multi</field>
+            <field name="value" eval="'ir.actions.server,' +str(ref('hr_employee_bpjs_generate_all_action'))" />
+            <field name="key">action</field>
+            <field name="model">hr.generate.employee.bpjs</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_bpjs_generate_action">
+            <field name="name">BPJS Form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.generate.employee.bpjs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="context">{"search_default_filter_month":1}</field>
+            <field name="search_view_id" ref="hr_employee_bpjs_generate_view_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new BPJS Generate.
+              </p><p>
+                A BPJS Form is an instruction to set Generate bpjs for employee.
+              </p>
+            </field>
+        </record>
+
+         <menuitem
+            id="hr_employee_bpjs_generate_menu_action"
+            name="BPJS Generate Batch"
+            parent="hr_employee_parent_bpjs_menu_root"
+            action="hr_employee_bpjs_generate_action"
+            sequence="10"
+        />
+
+
+    </data>
+</odoo>

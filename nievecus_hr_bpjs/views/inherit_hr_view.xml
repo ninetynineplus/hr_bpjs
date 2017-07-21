@@ -34,6 +34,14 @@
 
                  <xpath expr="//notebook/page[@name='personal_information']" position="after">
                     <page string="BPJS Register">
+                        <div class="oe_right oe_button_box" name="buttons">
+                            <button type="object"
+                                    name="generate_form_bpjs"
+                                    class="oe_stat_button"
+                                    string="Generate BPJS"
+                                    icon="fa-download" >
+                            </button>
+                        </div>
                         <group string="Employee BPJS Registration" name="employee_bpjs_type">
                               <field name="bpjs_rel_ids" string="BPJS Register" widget="many2many_checkboxes"/>
                         </group>
