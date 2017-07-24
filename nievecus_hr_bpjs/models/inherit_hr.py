@@ -49,13 +49,18 @@ class InheritHrEmployee(models.Model):
     bpjs_count = fields.Integer(compute='_compute_bpjs_count', string='BPJS',store=True)
 
     @api.multi
+    @api.depends('bpjs_ids')
     def _compute_bpjs_count(self):
         # read_group as sudo, since BPJS count is displayed on form view
-        contract_data = self.env['hr.employee.form.bpjs'].sudo().read_group([('employee_id', 'in', self.ids)],
-                                                                            ['employee_id'], ['employee_id'])
-        result = dict((data['employee_id'][0], data['employee_id_count']) for data in contract_data)
         for employee in self:
-            employee.bpjs_count = result.get(employee.id, 0)
+
+            bpjs_data = employee.env['hr.employee.form.bpjs'].search([('employee_id','=',employee.id)])
+
+            try:
+                count_bpjs = len(bpjs_data)
+            except:
+                count_bpjs = 0
+            employee.bpjs_count = count_bpjs
 
     @api.multi
     def act_show_log_bpjs(self):
