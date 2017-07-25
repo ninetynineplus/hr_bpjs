@@ -8,33 +8,59 @@
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//notebook/page[@name='personal_information']" position="after">
-                    <page string="HR Indonesia">
+                    <page string="Employee Status">
                         <group>
                             <group string="Employee Information" name="employee_type">
+                                <field name="nik_number"/>
                                 <field name="supervisor_level_id"/>
                                 <field name="company_id"/>
                                 <field name="contract_type"/>
                                 <field name="contract_period"/>
-                                <field name="joindate"/>
+                                <field name="month_probation" string="Month of Probation"/>
+                                <field name="hiredate" string="Date Of Hire"/>
+                                <field name="joindate" string="Date Of Join"/>
+                                <field name="date_probation" string="Date of Probation"/>
+                                <field name="resigndate" string="Date Of Resign"/>
                                 <field name="internship"/>
                                 <field name="outsource"/>
                                 <field name="office_level_id"/>
                             </group>
-                            <group string="Identification" name="employee_id">
-                                <field name="nik_number"/>
-                                <field name="health_insurance_number" string="BPJS K"/>
-                                <field name="npwp_number"/>
-                            </group>
-                            <group string="Other Information" name="other_information">
-                                <field name="religion_id"/>
-                                <field name="ethnic_id"/>
-                            </group>
-                            <group string="Tax" name="tax">
-                                <field name="tax_marital_id"/>
-                                <field name="tax_dependent"/>
-                            </group>
                         </group>
                     </page>
+                </xpath>
+            </field>
+        </record>
+
+         <record id="nievecus_hr_indonesia_employee_inherit_hr_employee_information" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
+                    <group string="Identification" name="employee_id">
+                        <field name="health_insurance_number" string="BPJS K"/>
+                        <field name="npwp_number" string="NPWP no"/>
+                        <field name="identif_num" string="Identification No"/>
+                        <field name="image_npwp" string="Upload NPWP" filename="npwp_name"/>
+                        <field name="npwp_name" invisible="1"/>
+                        <field name="image_family_card" string="Upload KK" filename="family_card_name"/>
+                        <field name="family_card_name" invisible="1"/>
+                    </group>
+                    <group string="Other Information" name="other_information">
+                        <field name="religion_id"/>
+                        <field name="ethnic_id"/>
+                    </group>
+                    <group string="Tax" name="tax">
+                        <field name="tax_marital_id"/>
+                        <field name="tax_dependent"/>
+                    </group>
+                    <group string="Education">
+                        <field name="last_education" string="Last Education"/>
+                        <field name="education_type" string="Degree"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='birthday']" position="after">
+                     <field name="age_employee" string="Age Of Employee"/>
                 </xpath>
             </field>
         </record>
