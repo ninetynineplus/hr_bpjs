@@ -30,9 +30,21 @@
                          <field name="count_education" widget="statinfo" string="Education"/>
                      </button>
                  </xpath>
-
             </field>
+        </record>
 
+        <record id="nievecus_hr_indonesia_employee_inherit_education" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
+                        <group string="Education">
+                            <field name="last_education" string="Last Education"/>
+                            <field name="education_type" string="Degree"/>
+                        </group>
+                </xpath>
+            </field>
         </record>
 
     </data>

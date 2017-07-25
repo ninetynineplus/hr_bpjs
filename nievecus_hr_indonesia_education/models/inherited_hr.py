@@ -24,6 +24,35 @@ class InheritHrEmployee(models.Model):
 
     detail_education_ids = fields.One2many('nievecus_hr_indonesia.education.detail','employee_id',string='Education')
     count_education = fields.Integer('Count Education',compute='_compute_education_count')
+    last_education = fields.Many2one('nievecus_hr_indonesia.education','Education',
+                                     compute='compute_get_employee_last_contract')
+    education_type = fields.Many2one('nievecus_hr_indonesia.education.type',related='last_education.education_type')
+
+    @api.multi
+    def get_employee_last_education(self):
+        """
+        this method use to get employee last education
+        :return: education_id
+        """
+        EmployeeEducation = self.env['nievecus_hr_indonesia.education.detail']
+        for education in self:
+            employee_education = EmployeeEducation.search([('employee_id', '=', education.id)], limit=1,
+                                                        order='id desc')
+
+            if employee_education:
+                education_id = employee_education.education_id.id
+            else:
+                education_id = 0
+
+            return education_id
+
+    @api.multi
+    @api.depends('detail_education_ids')
+    def compute_get_employee_last_contract(self):
+
+        """onchange value contract from  employee last education"""
+        for contract in self:
+            contract.last_education = contract.get_employee_last_education()
 
     @api.multi
     @api.depends('detail_education_ids')

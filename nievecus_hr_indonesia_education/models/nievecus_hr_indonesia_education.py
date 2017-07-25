@@ -32,6 +32,7 @@ class NievecusHrEducation(models.Model):
 class NievecusHrEducationDetail(models.Model):
 
     _name = 'nievecus_hr_indonesia.education.detail'
+    _rec_name = 'education_id'
 
     name = fields.Char('Name')
     education_type = fields.Many2one('nievecus_hr_indonesia.education.type','Education Type')
