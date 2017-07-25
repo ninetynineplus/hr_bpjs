@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="nievecus_hr_indonesia_education_view_action_2">
+            <field name="name">Education</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">nievecus_hr_indonesia.education.detail</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new Education Form.
+              </p><p>
+                A BPJS Form is an instruction to set Education for employee.
+              </p>
+            </field>
+        </record>
+
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="inherit_hr_employee_education">
+            <field name="name">inherit HR employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[@class='oe_button_box']" position="inside">
+                     <button name="act_show_log_education"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-graduation-cap"
+                                >
+                         <field name="count_education" widget="statinfo" string="Education"/>
+                     </button>
+                 </xpath>
+
+            </field>
+
+        </record>
+
+    </data>
+</odoo>
