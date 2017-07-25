@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+    <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="nievecus_hr_family_tree">
+            <field name="name">nievecus_hr_family_tree</field>
+            <field name="model">nievecus_hr.family</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="name" string="Family Name"/>
+                    <field name="gender" string="Gender" required="True"/>
+                    <field name="birthplace_date" string="Birth Place and Date"/>
+                    <field name="status" string="Status" required="True"/>
+                    <field name="marital" string="Marital"/>
+                    <field name="health" string="Health"/>
+                    <field name="ticket" string="Ticket"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nievecus_hr_family_form">
+            <field name="name">HR Family Form</field>
+            <field name="model">nievecus_hr.family</field>
+                <field name="arch" type="xml">
+                   <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name" string="Name"/>
+                                    <field name="gender" string="Gender"/>
+                                    <field name="birthplace" string="Birth Place"/>
+                                    <field name="birthdate" string="Birth Date"/>
+                                    <field name="age" readonly="True" string="Age"/>
+                                </group>
+                               <group>
+                                   <field name="identif_no" string="Identification Number"/>
+                                   <field name="status" string="Status"/>
+                                   <field name="marital" string="Marital"/>
+                                   <field name="job_id" string="Last Job"/>
+                                   <field name="health" string="Health"/>
+                                   <field name="ticket" string="Ticket"/>
+                                   <field name="active_status" string="Active"/>
+                                   <field name="emergency" string="Emergency"/>
+                                   <field name="family_phone" string="Family Phone"/>
+                               </group>
+                            </group>
+                        </sheet>
+                    </form>
+                 </field>
+             </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="nievecus_hr_family_action">
+        <field name="name">Family</field>
+        <field name="res_model">nievecus_hr.family</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

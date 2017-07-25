@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+          <record model="ir.actions.act_window" id="nievecus_hr_family_action2">
+            <field name="name">Family</field>
+            <field name="res_model">nievecus_hr.family</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+          </record>
+
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="inherit_hr_employee_family">
+            <field name="name">inherit HR employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[@class='oe_button_box']" position="inside">
+                     <button name="act_show_log_family"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-users"
+                                >
+                         <field name="count_family" widget="statinfo" string="Family"/>
+                     </button>
+                 </xpath>
+            </field>
+        </record>
+
+        <record id="nievecus_hr_indonesia_employee_inherit_family" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='address_home_id']" position="after">
+                    <field name="emergency_person" string="Emergency Contact Person"/>
+                    <field name="emergency_phone" string="Emergency Contact Phone"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

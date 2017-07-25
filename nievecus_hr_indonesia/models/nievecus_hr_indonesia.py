@@ -42,7 +42,6 @@ class Employee(models.Model):
                                             "* Daily, Karyawan Harian.", track_visibility="onchange")
     outsource = fields.Boolean("Outsource employee", help="Activate to represent employee as Outsource.")
     internship = fields.Boolean("Internship", help="Activate to represent internship employee.")
-    age = fields.Float("Employee Age", compute='_compute_age')
     joindate = fields.Date("Date of Join")
     religion_id = fields.Many2one('nievecus_hr_indonesia.religion', "Religion")
     ethnic_id = fields.Many2one('nievecus_hr_indonesia.ethnic', "Ethnic")
@@ -52,23 +51,19 @@ class Employee(models.Model):
     office_level_id = fields.Many2one('nievecus_hr_indonesia.office', 'Office Level')
     supervisor_level_id = fields.Many2one('nievecus_hr_indonesia.supervisor', 'Supervisor Level')
 
-    date_probation = fields.Char('Date of Probation', compute='_compute_probation')
+    date_probation = fields.Char('Date of Probation', compute='_compute_probation',store=True)
     month_probation = fields.Integer('Month Probation')
     image_family_card = fields.Binary('Upload Family Card')
     family_card_name = fields.Char('Family Card Name')
     image_npwp = fields.Binary('Upload NPWP')
     npwp_name = fields.Char('NPWP Name')
     identif_num = fields.Char('Identification Number', related='identification_id')
-    age_employee = fields.Char('Age', compute='_compute_age', readonly="True")
+    age_employee = fields.Char('Age', compute='_compute_age', readonly="True",store=True)
     resigndate = fields.Date('Date of Resign')
     hiredate = fields.Date('Date of Hired')
     grade_id = fields.Many2one('hr.indonesia.grade', 'Grade')
-    religion = fields.Char('Religion', compute='_compute_religion')
+    religion = fields.Char('Religion', compute='_compute_religion',store=True)
 
-
-    def _compute_age(self):
-        for record in self:
-            record.age = 1
 
     @api.multi
     @api.constrains('joindate', 'hiredate')
