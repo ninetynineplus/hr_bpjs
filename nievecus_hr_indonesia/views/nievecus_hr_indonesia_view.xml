@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="nievecus_hr_indonesia_employee" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']" position="after">
+                    <page string="HR Indonesia">
+                        <group>
+                            <group string="Employee Information" name="employee_type">
+                                <field name="supervisor_level_id"/>
+                                <field name="company_id"/>
+                                <field name="contract_type"/>
+                                <field name="contract_period"/>
+                                <field name="joindate"/>
+                                <field name="internship"/>
+                                <field name="outsource"/>
+                                <field name="office_level_id"/>
+                            </group>
+                            <group string="Identification" name="employee_id">
+                                <field name="nik_number"/>
+                                <field name="health_insurance_number" string="BPJS K"/>
+                                <field name="npwp_number"/>
+                            </group>
+                            <group string="Other Information" name="other_information">
+                                <field name="religion_id"/>
+                                <field name="ethnic_id"/>
+                            </group>
+                            <group string="Tax" name="tax">
+                                <field name="tax_marital_id"/>
+                                <field name="tax_dependent"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_department_form_inherited_nievecus_hr_indonesia" model="ir.ui.view">
+            <field name="name">Department Tree</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="code"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <!-- Search View, requirement: search by NIK/ID -->
+        <record id="inherited_hr_view_employee_filter" model="ir.ui.view">
+            <field name="name">Employee Filter</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+                    <field name="nik_number"/>
+                    <field name="identification_id"/>
+                    <filter name="filter_daily_labour" string="Daily Labour"
+                            domain="[('contract_type', '=', '2'),('contract_period','=', '2')]"/>
+                    <filter name="filter_outsource" string="Outsource"
+                            domain="[('outsource', '=', True)]"/>
+                    <filter name="filter_internship" string="Internship"
+                            domain="[('internship', '=', True)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Require to view NIK -->
+        <record id="inherited_hr_view_employee_view_tree" model="ir.ui.view">
+            <field name="name">Employee Tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="contract_type" str=""/>
+                    <field name="contract_period" str=""/>
+                    <field name="nik_number"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </xpath>
+                <!-- remove unused info -->
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_email']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Require to view NIK -->
+        <record id="inherited_hr_view_employee_view_kanban" model="ir.ui.view">
+            <field name="name">Employee Kanban</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_kanban_details']//ul" position="inside">
+                    <t t-if="record.contract_type.raw_value and record.contract_period.raw_value">
+                        <li>Status <field name="contract_type"/> <field name="contract_period"/></li>
+                    </t>
+                    <li t-if="record.nik_number.raw_value">NIK <field name="nik_number"/></li>
+                    <li t-if="record.company_id.raw_value"><field name="company_id"/></li>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Require to filter new employee this month -->
+        <record id="inherited_hr_view_employee_filter" model="ir.ui.view">
+            <field name="name">Inherited Employee View Filter</field>
+            <field name="model">hr.employee</field>
+            <field name="inherited_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+                    <separator/>
+                    <filter string="Last Month New Employee" name="last_month_employee"
+                        domain="[('joindate','&lt;=',(context_today()+relativedelta(months=0,day=1,days=-1)).strftime('%Y-%m-%d')),
+                        ('joindate','&gt;=',(context_today()+relativedelta(months=-1,day=1)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="This Month New Employee" name="this_month_employee"
+                        domain="[('joindate', '&lt;=', (context_today()+relativedelta(months=1,day=1,days=-1)).strftime('%Y-%m-%d')),
+                        ('joindate','&gt;=',(context_today()+relativedelta(day=1)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="Next Month New Employee" name="next_month_employee"
+                        domain="[('joindate','&lt;=',(context_today()+relativedelta(months=2,day=1,days=-1)).strftime('%Y-%m-%d')),
+                        ('joindate','&gt;=',(context_today()+relativedelta(months=1,day=1)).strftime('%Y-%m-%d'))]"/>
+
+                </xpath>
+            </field>
+        </record>
+
+        
+        <record id="nievecus_hr_indonesia_location_view_tree" model="ir.ui.view">
+            <field name="name">nievecus_hr_indonesia.location.tree</field>
+            <field name="model">nievecus_hr_indonesia.location</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="complete_name"/>
+                    <field name="code"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="nievecus_hr_indonesia_location_view_form" model="ir.ui.view">
+            <field name="name">nievecus_hr_indonesia.location.form</field>
+            <field name="model">nievecus_hr_indonesia.location</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="type"/>
+                        <field name="comment"/>
+                        <field name="parent_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="office_view_tree" model="ir.ui.view">
+            <field name="name">Office Level Tree</field>
+            <field name="model">nievecus_hr_indonesia.office</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="office_view_form" model="ir.ui.view">
+            <field name="name">Office Level Form</field>
+            <field name="model">nievecus_hr_indonesia.office</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form>
+                    <group name="top">
+                        <group name="left">
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group name="right">
+                            <field name="sequence"/>
+                            <field name="comment"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_list_hr_religion" model="ir.actions.act_window" >
+            <field name="name">Religion</field>
+            <field name="res_model">nievecus_hr_indonesia.religion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_list_hr_ethnic" model="ir.actions.act_window" >
+            <field name="name">Ethnic</field>
+            <field name="res_model">nievecus_hr_indonesia.ethnic</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_list_hr_tax_marital" model="ir.actions.act_window" >
+            <field name="name">Tax Marital</field>
+            <field name="res_model">nievecus_hr_indonesia.tax_marital</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_list_hr_location" model="ir.actions.act_window" >
+            <field name="name">Placement Location</field>
+            <field name="res_model">nievecus_hr_indonesia.location</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_list_hr_office" model="ir.actions.act_window" >
+            <field name="name">Office Level</field>
+            <field name="res_model">nievecus_hr_indonesia.office</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_indonesia" name="Configuration ID" parent="hr.menu_hr_root"
+                  sequence="110"/>
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_religion" name="Religion" parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  action="action_list_hr_religion"
+                  sequence="10" />
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_ethnic" name="Ethnic" parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  action="action_list_hr_ethnic"
+                  sequence="20" />
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_tax_marital" name="Tax Marital" parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  action="action_list_hr_tax_marital"
+                  sequence="30"/>
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_location" name="Placement Location"
+                  parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  action="action_list_hr_location"
+                  sequence="30"/>
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_office" name="Office Level"
+                  parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  action="action_list_hr_office"
+                  sequence="40"
+                  />
+    </data>
+</odoo>
