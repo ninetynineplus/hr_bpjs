@@ -1,0 +1,119 @@
+<odoo>
+    <data>
+    <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="nievecus_hr_indonesia_tree">
+            <field name="name">nievecus_hr_indonesia_tree</field>
+            <field name="model">nievecus_hr_indonesia.education.detail</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="education_type" String="Education Type" required="True" widget="selection"/>
+                    <field name="name" string="Major"/>
+                    <field name="country_id"/>
+                    <field name="education_id" string="Education Institution"/>
+                    <field name="gpa" string="Index/GPA"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nievecus_hr_indonesia_form">
+            <field name="name">nievecus_hr_indonesia_form</field>
+            <field name="model">nievecus_hr_indonesia.education.detail</field>
+                <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                                <field name="education_type" string="Education Type" widget="selection"/>
+                                <field name="name" string="Major"/>
+                                <field name="country_id" string="Country"/>
+                                <field name="education_id" string="Education Institution"/>
+                                <field name="start_date" string="Start Date"/>
+                                <field name="end_date" string="End Date"/>
+                                <field name="gpa" string="Index/GPA"/>
+                                <field name="image_certificate" string="Upload Certificate"/>
+                                <field name="certificate_name" invisible="1"/>
+                            </group>
+                        </sheet>
+                    </form>
+                 </field>
+             </record>
+    <!-- actions opening views on models -->
+
+    <!-- View Search: Path -->
+        <record id="nievecus_hr_indonesia_education_view_search" model="ir.ui.view">
+            <field name="name">nievecus_hr_indonesia_search</field>
+            <field name="model">nievecus_hr_indonesia.education.detail</field>
+            <field name="arch" type="xml">
+                <search string="Search Employee Education">
+                    <field name="employee_id" string="Employee"/>
+                    <field name="education_type" string="Education Type" widget="selection"/>
+                    <field name="name" string="Major"/>
+                    <field name="country_id" string="Country"/>
+                    <field name="education_id" string="Education Institution"/>
+                    <field name="start_date" string="Start Date"/>
+                    <field name="end_date" string="End Date"/>
+                    <field name="gpa" string="Index/GPA"/>
+                    <field name="image_certificate" string="Upload Certificate"/>
+                    <field name="certificate_name" invisible="1"/>
+                    <separator/>
+                    <separator/>
+                    <filter name="filter_month" icon="terp-go-month" string="This Month"
+                            domain="[('start_date','&lt;=',(context_today()+relativedelta(day=31)).strftime('%%Y-%%m-%%d')),
+                            ('start_date','&gt;=',(context_today()-relativedelta(day=1)).strftime('%%Y-%%m-%%d'))]"/>
+                    <filter name="filter_year" icon="terp-go-year" string="This Year"
+                            domain="[('start_date','&lt;=',(context_today()+relativedelta(day=31, month=12)).strftime('%%Y-%%m-%%d')),
+                            ('start_date','&gt;=',(context_today()-relativedelta(day=1, month=1)).strftime('%%Y-%%m-%%d'))]"/>
+                    <separator/>
+                    <filter icon="terp-go-month" string="Previous Month"
+                            domain="[('start_date','&lt;=',(context_today()+relativedelta(months=0,day=1,days=-1)).strftime('%Y-%m-%d')),
+                            ('start_date','&gt;=',(context_today()+relativedelta(months=-1,day=1)).strftime('%Y-%m-%d'))]"/>
+                    <!-- Relativedelta required weeks, days and weekday -->
+                    <filter icon="terp-go-month" string="Previous Week"
+                            domain="[('start_date','&lt;=',(context_today()+relativedelta(weeks=-2, days=7, weekday=6)).strftime('%Y-%m-%d')),
+                            ('start_date','&gt;=',(context_today()+relativedelta(weeks=-2, days=1, weekday=0)).strftime('%Y-%m-%d'))]"/>
+                    <separator/>
+                    <group expand="0" string="Group By...">
+                        <filter name="by_month" string="Month"
+                                context="{'group_by': 'start_date:month'}"/>
+                        <filter name="by_week" string="Week"
+                                context="{'group_by': 'start_date:week'}"/>
+                        <filter name="by_date" string="Date"
+                                context="{'group_by': 'start_date:day'}"/>
+                        <filter string="Education Institution" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'education_id'}"/>
+                        <filter string="Employee" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter string="GPA" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'gpa'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="nievecus_hr_indonesia_education_view_action">
+            <field name="name">Education</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">nievecus_hr_indonesia.education.detail</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_filter_month":1}</field>
+            <field name="search_view_id" ref="nievecus_hr_indonesia_education_view_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new Education Form.
+              </p><p>
+                A BPJS Form is an instruction to set Education for employee.
+              </p>
+            </field>
+        </record>
+
+        <!-- Menu: Path -->
+        <menuitem id="nievecus_hr_indonesia_parent_menu_root" name="Education" parent="hr.menu_hr_root"
+                  sequence="3"/>
+
+        <menuitem
+            id="nievecus_hr_indonesia_education_menu_action"
+            name="Education Form"
+            parent="nievecus_hr_indonesia_parent_menu_root"
+            action="nievecus_hr_indonesia_education_view_action"
+            sequence="10"
+        />
+    </data>
+</odoo>
