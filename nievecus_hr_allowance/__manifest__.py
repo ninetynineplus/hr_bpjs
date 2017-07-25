@@ -31,7 +31,6 @@
         # 'security/ir.model.access.csv',
         'views/nievecus_hr_general_allowance_view.xml',
         'views/nievecus_hr_form_allowance_view.xml',
-        'views/nievecus_hr_register_allowance_view.xml',
         'views/inherit_hr_contract.xml'
     ],
     # only loaded in demonstration mode

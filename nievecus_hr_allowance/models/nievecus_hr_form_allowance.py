@@ -19,46 +19,7 @@ from openerp import tools
 
 _logger = logging.getLogger(__name__)
 
-class HrEmployeeAllowanceRegister(models.Model):
 
-    _name = 'hr.employee.allowance.register'
-    _rec_name = 'employee_id'
-
-
-
-    employee_id = fields.Many2one('hr.employee','Employee')
-    allowance_ids = fields.Many2many('hr.employee.general.allowance',
-                                     'employee_allowance_rel','employee_id','allowance_id',string='List Of BPJS',
-                                     domain=[('type','=','normal')])
-
-    # @api.multi
-    # def create_purchase_requisition(self):
-    #     # Create Contract
-    #     for contract in self:
-    #         date = fields.Date.context_today(contract)
-    #         contrac_data = {
-    #             'employee_id': contract.employee_id.id,
-    #             'wage': 0,
-    #             'date_start': date,
-    #             'origin': purchase.complete_name,
-    #             'request_id': purchase.id,
-    #             'ordering_date': datetime.today(),
-    #             'owner_id': purchase.id
-    #         }
-    #         res = self.env['purchase.requisition'].create(purchase_data)
-    #
-    #     for purchaseline in self.env['purchase.request.line'].search([('request_id.id', '=', self.id)]):
-    #         purchaseline_data = {
-    #             'product_id': purchaseline.product_id.id,
-    #             'est_price': purchaseline.price_per_product,
-    #             'product_uom_id': purchaseline.product_uom_id.id,
-    #             'product_qty': purchaseline.product_qty if purchaseline.control_unit == 0 else purchaseline.control_unit,
-    #             'requisition_id': res.id,
-    #             'owner_id': res.owner_id
-    #         }
-    #         self.env['purchase.requisition.line'].create(purchaseline_data)
-    #
-    #     return True
 
 class HrEmployeeAllowanceForm(models.Model):
 
