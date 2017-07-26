@@ -1,0 +1,44 @@
+<openerp>
+    <data>
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="inherit_res_country_state_form">
+            <field name="name">inherit res country state</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="parent_id" string = "Parent"/>
+                    <field name="regional_level" string="Regional"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="list_city_menu_action" model="ir.actions.act_window" >
+            <field name="name">City Levels</field>
+            <field name="res_model">res.country.state</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="regional_comparison_view_search" model="ir.ui.view">
+                <field name="name">Search Regional</field>
+                <field name="model">res.country.state</field>
+                <field name="arch" type="xml">
+                <search string="Search Regional Level">
+                    <filter name="name" string="Province"
+                            domain="[('regional_level','=','province')]"
+                            help="Level province"/>
+                    <filter name="name" string="City"
+                            domain="[('regional_level','=','city')]"
+                            help="Level City"/>
+                    <filter name="name" string="District"
+                            domain="[('regional_level','=','district')]"
+                            help ="Level District"/>
+                    <filter name="name" string="Sub-district"
+                            domain="[('regional_level','=','subdistrict')]"
+                            help="Level Sub-district"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>

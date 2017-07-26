@@ -38,7 +38,7 @@ class NievecusHrFamily(models.Model):
     ticket = fields.Selection([('covered','Covered'),('not_covered','Not Covered')])
     health = fields.Selection([('covered', 'Covered'), ('not_covered', 'Not Covered')])
     emergency = fields.Boolean('Emergency Person')
-    family_phone = fields.Integer('Family Phone')
+    family_phone = fields.Char('Family Phone',defaults='+62')
 
     @api.multi
     @api.depends('birthdate')
@@ -130,3 +130,4 @@ class NievecusHrStatusFamily(models.Model):
     _description = 'Status of Family '
 
     name = fields.Char('Status')
+    child = fields.Boolean('Child')
