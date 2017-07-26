@@ -1,38 +1,38 @@
 <odoo>
     <data>
-          <record model="ir.actions.act_window" id="nievecus_job_experience_action2">
-            <field name="name">Job Experience</field>
-            <field name="res_model">nievecus_hr_indonesia.job.experience</field>
+        <record model="ir.actions.act_window" id="nievecus_training_action2">
+            <field name="name">Training</field>
+            <field name="res_model">nievecus_hr_indonesia.training</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-          </record>
+        </record>
 
         <!-- Add instructor field to existing view -->
-        <record model="ir.ui.view" id="inherit_hr_employee_job_experience">
+        <record model="ir.ui.view" id="inherit_hr_employee_training">
             <field name="name">inherit HR employee</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                  <xpath expr="//div[@class='oe_button_box']" position="inside">
-                     <button name="act_show_log_job_experience"
+                     <button name="act_show_log_training"
                                 type="object"
                                 class="oe_stat_button"
-                                icon="fa-industry "
+                                icon="fa-university"
                                 >
-                         <field name="count_job_experience" widget="statinfo" string="Job Exp"/>
+                         <field name="count_training" widget="statinfo" string="Training"/>
                      </button>
                  </xpath>
             </field>
         </record>
 
-        <record id="nievecus_hr_indonesia_employee_inherit_job_experience" model="ir.ui.view">
+        <record id="nievecus_hr_indonesia_employee_inherit_hr_training" model="ir.ui.view">
             <field name="name">HR Indonesia Employee</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
-                    <group string="Job Experience">
-                        <field name="last_company" string="Last Job"/>
+                    <group string="Training &amp; Sertificate">
+                        <field name="last_training" string="Last Training"/>
                     </group>
                 </xpath>
             </field>

@@ -9,7 +9,7 @@
                     <field name="name" string="Company Name"/>
                     <field name="location" string="Location"/>
                     <field name="date_start" string="Date Start"/>
-                    <field name="date_start" string="Date End"/>
+                    <field name="date_end" string="Date End"/>
                     <field name="work_here" string="Currently Here"/>
                 </tree>
             </field>
@@ -31,7 +31,7 @@
                                 </group>
                                <group>
                                    <field name="date_start" string="Date Start"/>
-                                   <field name="date_start" string="Date End"/>
+                                   <field name="date_end" string="Date End"/>
                                    <field name="work_here" string="Currently Here"/>
                                </group>
                             </group>

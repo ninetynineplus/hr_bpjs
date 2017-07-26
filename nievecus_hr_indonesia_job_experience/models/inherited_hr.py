@@ -23,7 +23,7 @@ class InheritHrEmployee(models.Model):
 
     detail_job_experience_ids = fields.One2many('nievecus_hr_indonesia.job.experience','employee_id', string='job_experience List')
     count_job_experience = fields.Integer('Count job_experience', compute='_compute_job_experience_count')
-    last_company = fields.Many2one('nievecus_hr_indonesia.job.experience','Emergency Person',
+    last_company = fields.Many2one('nievecus_hr_indonesia.job.experience','Last Company',
                                        compute='compute_get_employee_job_experience',store=True)
 
     @api.multi
@@ -49,7 +49,7 @@ class InheritHrEmployee(models.Model):
         Employeejob_experience = self.env['nievecus_hr_indonesia.job.experience']
         for job_experience in self:
             employee_job_experience = Employeejob_experience.search([('employee_id', '=', job_experience.id)], limit=1,
-                                                          order='id desc')
+                                                          order='date_end desc')
 
             if employee_job_experience:
                 job_experience_id = employee_job_experience.id

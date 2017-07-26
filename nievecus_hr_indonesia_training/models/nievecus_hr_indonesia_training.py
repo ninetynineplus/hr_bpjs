@@ -17,9 +17,9 @@ from openerp import tools
 
 _logger = logging.getLogger(__name__)
 
-class NievecusCompanyExperience(models.Model):
+class NievecusInstiution(models.Model):
 
-    _name = 'nievecus_hr.company.experience'
+    _name = 'nievecus_hr.institution'
     _inherits = {'res.partner': 'partner_id'}
 
     partner_id = fields.Many2one('res.partner', 'Partner id')
@@ -28,17 +28,17 @@ class NievecusCompanyExperience(models.Model):
 
 class NievecusHrIndonesiaJobExperience(models.Model):
 
-    _name = 'nievecus_hr_indonesia.job.experience'
+    _name = 'nievecus_hr_indonesia.training'
     _rec_name = 'name'
-    _description = 'this module provide history of job in indonesia'
+    _description = 'this module provide history of training in indonesia'
 
-    company_name = fields.Many2one('nievecus_hr.company.experience','Company')
-    name = fields.Char('Char',related='company_name.display_name')
+    institution_name = fields.Many2one('nievecus_hr.institution','Institution')
+    name = fields.Char('Name Training')
     employee_id = fields.Many2one('hr.employee','Employee')
-    address = fields.Text('Company Address')
     location = fields.Many2one('res.country.state','Location')
+    training_detail = fields.Text('Training Detail')
     date_start = fields.Date('Date Start',store=True)
     date_end = fields.Date('Date End',store=True)
-    work_here = fields.Boolean('Work Here',help=" I Currently Work Here")
-
+    image_certificate = fields.Binary('Upload certificate')
+    certificate_name = fields.Char('certificate Name')
 
