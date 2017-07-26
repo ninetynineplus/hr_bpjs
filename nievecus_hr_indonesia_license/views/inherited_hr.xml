@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+          <record model="ir.actions.act_window" id="nievecus_drive_license_action2">
+            <field name="name">Drive License</field>
+            <field name="res_model">nievecus_hr.drive.license</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+          </record>
+
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="inherit_hr_employee_drive_license">
+            <field name="name">inherit HR employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[@class='oe_button_box']" position="inside">
+                     <button name="act_show_log_drive_license"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-address-card"
+                                >
+                         <field name="count_drive_license" widget="statinfo" string="License"/>
+                     </button>
+                 </xpath>
+            </field>
+        </record>
+
+        <record id="nievecus_hr_indonesia_employee_inherit_drive_license" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
+                    <group string="Driver License">
+                        <field name="last_license" string="Last License"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
