@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="nievecus_drive_license_tree">
+            <field name="name">nievecus_drive_license_tree</field>
+            <field name="model">nievecus_hr.drive.license</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="name" string="License Name"/>
+                    <field name="no_license" string="License No"/>
+                    <field name="publisher_license_id" string="Publisher"/>
+                    <field name="date_start" string="Date Start"/>
+                    <field name="date_end" string="Date End"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nievecus_drive_license_form">
+            <field name="name">HR Family Form</field>
+            <field name="model">nievecus_hr.drive.license</field>
+                <field name="arch" type="xml">
+                   <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                     <field name="license_id" string="License Name"/>
+                                     <field name="no_license" string="License No"/>
+                                     <field name="publisher_license_id" string="Publisher"/>
+                                </group>
+                               <group>
+                                    <field name="date_start" string="Date Start"/>
+                                    <field name="date_end" string="Date End"/>
+                               </group>
+                            </group>
+                        </sheet>
+                    </form>
+                 </field>
+             </record>
+
+    <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="nievecus_drive_license_action">
+            <field name="name">Drive License</field>
+            <field name="res_model">nievecus_hr.drive.license</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -44,7 +44,7 @@
 
         <menuitem id="menu_nievecus_hr_indonesia_configuration_supervisor"
                   name="Supervisor Level"
-                  parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  parent="hr.menu_human_resources_configuration"
                   action="action_list_hr_supervisor"
                   sequence="40" />
     </data>

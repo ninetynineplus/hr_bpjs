@@ -242,23 +242,25 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="menu_nievecus_hr_indonesia_configuration_indonesia" name="Configuration ID" parent="hr.menu_hr_root"
-                  sequence="110"/>
-        <menuitem id="menu_nievecus_hr_indonesia_configuration_religion" name="Religion" parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_religion" name="Religion"
+                  parent="hr.menu_human_resources_configuration"
                   action="action_list_hr_religion"
                   sequence="10" />
-        <menuitem id="menu_nievecus_hr_indonesia_configuration_ethnic" name="Ethnic" parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_ethnic" name="Ethnic"
+                  parent="hr.menu_human_resources_configuration"
                   action="action_list_hr_ethnic"
                   sequence="20" />
-        <menuitem id="menu_nievecus_hr_indonesia_configuration_tax_marital" name="Tax Marital" parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_tax_marital" name="Tax Marital"
+                  parent="hr.menu_human_resources_configuration"
                   action="action_list_hr_tax_marital"
                   sequence="30"/>
         <menuitem id="menu_nievecus_hr_indonesia_configuration_location" name="Placement Location"
-                  parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  parent="hr.menu_human_resources_configuration"
                   action="action_list_hr_location"
                   sequence="30"/>
         <menuitem id="menu_nievecus_hr_indonesia_configuration_office" name="Office Level"
-                  parent="menu_nievecus_hr_indonesia_configuration_indonesia"
+                  parent="hr.menu_human_resources_configuration"
                   action="action_list_hr_office"
                   sequence="40"
                   />

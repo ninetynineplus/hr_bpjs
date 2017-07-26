@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+        <!-- View Tree: Path -->
+        <record id="hr_employee_general_drive_license_view_tree" model="ir.ui.view">
+            <field name="name">general.driver.licence</field>
+            <field name="model">general.driver.licence</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Drive License " decoration-info="type=='view'">
+                    <field name="complete_name" string="Drive License"/>
+                    <field name="type_license" string="License Type" />
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- View Form: Path -->
+        <record id="hr_employee_general_drive_license_view_form" model="ir.ui.view">
+            <field name="name">general.driver.licence</field>
+            <field name="model">general.driver.licence</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" colors="blue">
+                             <h1>
+                                 <label string="Drive License Configuration"/>
+                             </h1>
+                        </div>
+                            <group col = '2'>
+                                 <group>
+                                     <field name="name" string="Drive License Name"/>
+                                     <field name="parent_id" string="Parent Drive License" />
+                                     <field name="type" string="Type"/>
+                                </group>
+                                <group>
+                                    <field name="type_license" string="License Type"/>
+                                </group>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- View Search: Path -->
+        <record id="hr_employee_general_drive_license_view_search" model="ir.ui.view">
+            <field name="name">general.driver.licence</field>
+            <field name="model">general.driver.licence</field>
+            <field name="arch" type="xml">
+                <search string="Search Employee drive_license">
+                    <field name="complete_name" string="License Name"/>
+                    <field name="type_license" string="License Type"/>
+                    <field name="parent_id" string="Parent drive_license" />
+                    <separator/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Drive License Name" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'complete_name'}"/>
+                        <filter string="License Type" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'type_license'}"/>
+                        <filter string="Parent" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'parent_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_employee_general_drive_license_action" model="ir.actions.act_window" >
+            <field name="name">Drive License Configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">general.driver.licence</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="hr_employee_general_drive_license_view_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new drive_license Configuration.
+              </p><p>
+                A drive_license Configuration is an master to set drive_license for employee.
+              </p>
+            </field>
+        </record>
+
+        <!-- Menu: Path -->
+        <menuitem
+            id="hr_employee_general_drive_license_menu_action"
+            name="Drive License"
+            parent="hr.menu_human_resources_configuration"
+            action="hr_employee_general_drive_license_action"
+            sequence="10"
+        />
+    </data>
+</odoo>
