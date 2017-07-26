@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+          <record model="ir.actions.act_window" id="nievecus_job_experience_action2">
+            <field name="name">Job Experience</field>
+            <field name="res_model">nievecus_hr_indonesia.job.experience</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+          </record>
+
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="inherit_hr_employee_family">
+            <field name="name">inherit HR employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[@class='oe_button_box']" position="inside">
+                     <button name="act_show_log_job_experience"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-industry "
+                                >
+                         <field name="count_job_experience" widget="statinfo" string="Job Exp"/>
+                     </button>
+                 </xpath>
+            </field>
+        </record>
+
+        <record id="nievecus_hr_indonesia_employee_inherit_job_expeerience" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
+                    <group string="Job Experience">
+                        <field name="last_company" string="Last Job"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

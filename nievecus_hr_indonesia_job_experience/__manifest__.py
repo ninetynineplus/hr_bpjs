@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "HR Education",
+    'name': "HR Job Experience",
 
     'summary': """
-        Education List""",
+        Job Experience History""",
 
     'description': """
-        This Module to provide HR Education in indonesia
+        This module Provide history job of employee in indonesia
     """,
 
     'author': "Arya and Mahroza",
@@ -24,13 +24,12 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/inherit_hr_view.xml',
-        'views/nievecus_hr_indonesia_education_view.xml',
+        'views/inherited_hr.xml',
+        'views/nievecus_hr_company_experience_view.xml',
+        'views/nievecus_hr_indonesia_job_experience_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/nievecus_hr_indonesia.education.type.csv',
-        'demo/nievecus_hr_indonesia.education.csv'
-
+        # 'demo/demo.xml',
     ],
 }

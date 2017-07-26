@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="nievecus_job_experience_tree">
+            <field name="name">nievecus_job_experience_tree</field>
+            <field name="model">nievecus_hr_indonesia.job.experience</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="name" string="Company Name"/>
+                    <field name="location" string="Location"/>
+                    <field name="date_start" string="Date Start"/>
+                    <field name="date_start" string="Date End"/>
+                    <field name="work_here" string="Currently Here"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nievecus_job_experience_form">
+            <field name="name">HR Family Form</field>
+            <field name="model">nievecus_hr_indonesia.job.experience</field>
+                <field name="arch" type="xml">
+                   <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="company_name" string="Company"/>
+                                    <field name="name" string="Name"/>
+                                    <field name="employee_id" string="Employee" invisible="1"/>
+                                    <field name="address" string="Company Address"/>
+                                    <field name="location" string="Location"/>
+                                </group>
+                               <group>
+                                   <field name="date_start" string="Date Start"/>
+                                   <field name="date_start" string="Date End"/>
+                                   <field name="work_here" string="Currently Here"/>
+                               </group>
+                            </group>
+                        </sheet>
+                    </form>
+                 </field>
+             </record>
+
+    <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="nievecus_job_experience_action">
+            <field name="name">Family</field>
+            <field name="res_model">nievecus_hr_indonesia.job.experience</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

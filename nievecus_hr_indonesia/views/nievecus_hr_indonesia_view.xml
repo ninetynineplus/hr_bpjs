@@ -40,7 +40,7 @@
                     <group string="Identification" name="employee_id">
                         <field name="health_insurance_number" string="BPJS K"/>
                         <field name="npwp_number" string="NPWP no"/>
-                        <field name="identif_num" string="Identification No"/>
+                        <field name="identif_num" string="KTP No"/>
                         <field name="image_npwp" string="Upload NPWP" filename="npwp_name"/>
                         <field name="npwp_name" invisible="1"/>
                         <field name="image_family_card" string="Upload KK" filename="family_card_name"/>
@@ -53,10 +53,6 @@
                     <group string="Tax" name="tax">
                         <field name="tax_marital_id"/>
                         <field name="tax_dependent"/>
-                    </group>
-                    <group string="Education">
-                        <field name="last_education" string="Last Education"/>
-                        <field name="education_type" string="Degree"/>
                     </group>
                 </xpath>
                 <xpath expr="//field[@name='birthday']" position="after">
