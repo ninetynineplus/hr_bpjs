@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="nievecus_hr_intitution_training_tree">
+            <field name="name">nievecus_hr_intitution_training_tree</field>
+            <field name="model">nievecus_hr.institution</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="name" string="Company Name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nievecus_hr_intitution_training_form">
+            <field name="name">nievecus_hr_intitution_training_form</field>
+            <field name="model">nievecus_hr.institution</field>
+                <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                                <field name="name" string="Company Name"/>
+                            </group>
+                        </sheet>
+                    </form>
+                 </field>
+             </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="nievecus_hr_intitution_training_action">
+        <field name="name">nievecus_hr_intitution_training window</field>
+        <field name="res_model">nievecus_hr.institution</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    </data>
+</odoo>
