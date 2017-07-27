@@ -7,6 +7,7 @@
             <field name="model">nievecus_hr_indonesia.education.detail</field>
             <field name="arch" type="xml" >
                 <tree>
+                    <field name="employee_id" string="Employee"/>
                     <field name="education_type" String="Education Type" required="True" widget="selection"/>
                     <field name="name" string="Major"/>
                     <field name="country_id"/>
