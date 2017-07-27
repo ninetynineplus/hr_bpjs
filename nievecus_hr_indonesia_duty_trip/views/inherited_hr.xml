@@ -40,7 +40,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
                         <group string="Duty Trip">
-                            <field name="last_duty_trip" string="Last duty_trip"/>
+                            <field name="last_duty_trip" string="Last Duty Trip"/>
                         </group>
                 </xpath>
             </field>
