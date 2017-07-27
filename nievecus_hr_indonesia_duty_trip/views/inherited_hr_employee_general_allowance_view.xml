@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="nievecus_hr_indonesia_employee_inherit_general_allowance" model="ir.ui.view">
+        <field name="name">Inherit hr.employee.general.allowance</field>
+        <field name="model">hr.employee.general.allowance</field>
+        <field name="inherit_id" ref="nievecus_hr_allowance.hr_employee_general_allowance_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type_allowance']" position="after">
+                <field name="is_duty" string="Is Duty"/>
+            </xpath>
+        </field>
+    </record>
+    </data>
+</odoo>
