@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="nievecus_medical_hospital_tree">
+            <field name="name">nievecus_medical_hospital_tree</field>
+            <field name="model">nievecus.medical.hospital</field>
+            <field name="arch" type="xml" >
+                <tree>
+                    <field name="name" string="Hospital Name"/>
+                    <field name="hospital_state" string="Hospital State"/>
+                    <field name="type_hospital" string="Hospital Type"/>
+                    <field name="hospital_address" string="Hospital Address"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nievecus_medical_hospital_form">
+            <field name="name">nievecus_medical_hospital_form</field>
+            <field name="model">nievecus.medical.hospital</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" string="Hospital Name"/>
+                            <field name="hospital_state" string="Hospital state"/>
+                            <field name="type_hospital" string="Hospital Type"/>
+                            <field name="hospital_address" string="Hospital Address"/>
+                        </group>
+                    </sheet>
+                </form>
+             </field>
+        </record>
+
+        <!-- View Search: Path -->
+        <record id="nievecus_medical_hospital_view_search" model="ir.ui.view">
+            <field name="name">nievecus.medical.hospital</field>
+            <field name="model">nievecus.medical.hospital</field>
+            <field name="arch" type="xml">
+                <search string="Search Hospital">
+                    <field name="name" string="Hospital Name"/>
+                    <field name="hospital_state" string="Hospital state"/>
+                    <field name="type_hospital" string="Hospital Type"/>
+                    <field name="hospital_address" string="Hospital Address"/>
+                    <separator/>
+                    <separator/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Hospital" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'name'}"/>
+                        <filter string="Hospital State" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'hospital_state'}"/>
+                        <filter string="type_hospital" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'type_hospital'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+    <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="nievecus_medical_hospital_action">
+            <field name="name">Hospital window</field>
+            <field name="res_model">nievecus.medical.hospital</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="nievecus_medical_hospital_view_search"/>
+        </record>
+
+
+        <menuitem id="menu_nievecus_hr_indonesia_configuration_location" name="Hospital"
+                  parent="hr.menu_human_resources_configuration"
+                  action="nievecus_medical_hospital_action"
+                  sequence="30"/>
+
+    </data>
+</odoo>

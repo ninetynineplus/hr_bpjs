@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nievecus_medical_hospital_nievecus_medical_hospital,nievecus_medical_hospital.nievecus_medical_hospital,model_nievecus_medical_hospital_nievecus_medical_hospital,,1,0,0,0

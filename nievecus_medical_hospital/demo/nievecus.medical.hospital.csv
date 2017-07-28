@@ -1,0 +1,477 @@
+id;name;hospital_state;type_hospital;hospital_address;is_hospital
+hospital_1;RSU Tapak Tuan;;rsu;Jl. Jen.Sudirman Tapak Tuan;TRUE
+hospital_2;RSU Kutacane;;rsu;Jl. Blang Kejeran Kutacane;TRUE
+hospital_3;RS Cut Meutia;;rs;Jl. Kebun Baru Langsa;TRUE
+hospital_4;RS Pertamina Rantau;;rs;Jl. Cepu Rantau Kab.Aceh Timur;TRUE
+hospital_5;RS Cut Nyak Dhien Langsa;;rs;Jl. T.M Bachrun No.1 Langsa;TRUE
+hospital_6;RSU Takengon;;rsu;Jl. Rumah Sakit Takengon;TRUE
+hospital_7;RSU Cut Nyak Dhien;;rsu;Jl. Gajah Mada Meulaboh;TRUE
+hospital_8;RSU Sigli;;rsu;Jl. Prof A.Majid Ibrahim Sigli;TRUE
+hospital_9;RSU Bireuen;;rsu;Jl. RSU No.13 Bireuen;TRUE
+hospital_10;RSU Lhokseumawe;;rsu;Jl. Samudra Lhokseumawe;TRUE
+hospital_11;RS PTP IX Cot Girek;;rs;Lhok Sukon Kab Aceh Utara;TRUE
+hospital_12;RS Rem 011 Lhokseumawe;;rs;Jl. Samudra Lhokseumawe;TRUE
+hospital_13;RS PT Arun;;rs;Komp PT Arun Lhokseumawe;TRUE
+hospital_14;RS Yayasan Kasih Ibu;;rs;Jl. Merdeka No.17 Lhokseumawe;TRUE
+hospital_15;RSIA Bunda;;rsia;Jl. Darussalam 16 Lhokseumawe;TRUE
+hospital_16;RSU Dr Zainoel Abidin;;rsia;Jl. Tgk Daud Beureueh B.Aceh;TRUE
+hospital_17;RS Dam I Banda Aceh;;rs;Jl. Kesehatan Banda Aceh;TRUE
+hospital_18;RS Jiwa Banda Aceh;;rs;Jl. Kakap 25 Banda Aceh;TRUE
+hospital_19;RS Malahayati;;rs;Jl. Cut Nyak Dhien 49B B.Aceh;TRUE
+hospital_20;RSIA Harapan Bunda;;rsia;Jl. Teuku Umar 181 Banda Aceh;TRUE
+hospital_21;RS Fakinah;;rs;Jl. Sudirman 27-29 Banda Aceh;TRUE
+hospital_22;RSU Meuraxa;;rsu;Banda Aceh;TRUE
+hospital_23;RSU Sabang;;rsu;Jl. Teuku Umar Sabang;TRUE
+hospital_24;RS AL Sabang;;rs;Jl. Tk Chik Ditiro Sabang;TRUE
+hospital_25;RSU Gunung Sitoli;;rsu;Jl. Cipto M.Kusumo Gn.Sitoli;TRUE
+hospital_26;RSU Panyabungan;;rsu;Jl. Merdeka No.40 Penyabungan;TRUE
+hospital_27;RSU Padang Sidempuan;;rsu;Jl. Dr FL Tobing Pd.Sidempuan;TRUE
+hospital_28;RSU Sipirok;;rsu;Sipirok Kab Tapanuli Selatan;TRUE
+hospital_29;RSU Dr Hadrianus Sinaga;;rsu;Jl. Dr Hadrianus S Pangururan;TRUE
+hospital_30;RSU Tarutung;;rsu;Jl. Bin Harun Said Tarutung;TRUE
+hospital_31;RSU Dolok Sanggul;;rsu;Jl. Kesehatan Dolok Sanggul;TRUE
+hospital_32;RS Kusta Hutasalem;;rs;Laguboti Kab Tapanuli Utara;TRUE
+hospital_33;RSU Porsea;;rsu;Jl. Parparean Porsea Kab Taput;TRUE
+hospital_34;RS Yy Kesehatan Samosir;;rs;Nainggolan Samosir Kab Taput;TRUE
+hospital_35;RSU HKBP Nainggolan;;rsu;Nainggolan Kab Taput;TRUE
+hospital_36;RS HKBP Balige;;rs;Jl. Gereja No.17 Balige;TRUE
+hospital_37;RSU Rantau Prapat;;rsu;Jl. KH Dewantara Rantau Prapat;TRUE
+hospital_38;RS PTP III Indrya Husada;;rs;Membang Muda Labuhan Batu;TRUE
+hospital_39;RS PTP III Aek Nabara;;rs;Aek Nabara Kab Labuhan Batu;TRUE
+hospital_40;RS PTP VI Ajamu;;rs;Kebun Ajamu Labuhan Bilik;TRUE
+hospital_41;RS Sri Torgamba;;rs;Torgamba Aek Batu Labuhan Batu;TRUE
+hospital_42;RSU Kisaran;;rsu;Jl. Sisingamangaraja Kisaran;TRUE
+hospital_43;RS Ibu Kartini;;rs;Kel Sei Renggas Kisaran;TRUE
+hospital_44;RS PTP VI Negaga;;rs;Bandar Pulau Kab Asahan;TRUE
+hospital_45;RS PT Inalum;;rs;Tanjung Gading Kab Asahan;TRUE
+hospital_46;RS PTP IV Laras;;rs;Serbalawan Kab Simalungun;TRUE
+hospital_47;RS Good Year;;rs;Dolok Merangir Kab Simalungun;TRUE
+hospital_48;RS PTP VI Tinjowan;;rs;Pos Sei Bejangkar Simalungun;TRUE
+hospital_49;RSU Bethesda GKPS;;rsu;Seribudolok Kab Simalungun;TRUE
+hospital_50;RSU Parapat;;rsu;Jl. RSU Parapat Kab Simalungun;TRUE
+hospital_51;RSU Sidikalang;;rsu;Jl. Rumah Sakit Sidikalang;TRUE
+hospital_52;RS Anna;;rs;Jl. Kartini No.5-7 Sidikalang;TRUE
+hospital_53;RSU Kabanjahe;;rsu;Jl. K S Ketaren 8 Kabanjahe;TRUE
+hospital_54;RS Serasi Kabanjahe;;rs;Jl. R Perangin Angin Kabanjahe;TRUE
+hospital_55;RS Kusta Lau Simomo;;rs;Lau Simomo Ktk Pos 13 Kab Karo;TRUE
+hospital_56;RS Ester;;rs;Jl. Veteran No.21 Kabanjahe;TRUE
+hospital_57;RS Malem Ras;;rs;Kabanjahe Kab Karo Sumut;TRUE
+hospital_58;RSU Lubuk Pakam;;rsu;Jl. T R Muda Lubuk Pakam;TRUE
+hospital_59;RS Dr Gerhard ML Tobing;;rs;Tg Morawa Kab Deli Serdang;TRUE
+hospital_60;RS PTPN III Petumbukan;;rs;Kec Galang Kab Deli Serdang;TRUE
+hospital_61;RS Sembiring;;rs;Jl. Besar No.77 Deli Tua;TRUE
+hospital_62;RS Kusta Belindahan;;rs;Belindahan Kab Deli Serdang;TRUE
+hospital_63;RSU Anirma;;rsu;Jl. Teratai Baru Deli Tua;TRUE
+hospital_64;RS Nur Saadah;;rs;Tg Morawa Km 12 Deli Serdang;TRUE
+hospital_65;RS Sari Mutiara Lb Pakam;;rs;Jl. Medan No.17 Lubuk Pakam;TRUE
+hospital_66;RS H o r a s;;rs;Jl. Bakaran Batu Lb Pakam Sumut;TRUE
+hospital_67;RS Helvetia;;rs;Jl. Kapt Sumarsono Deli Serdang;TRUE
+hospital_68;RSU Tanjung Pura;;rsu;Jl. Khairil Anwar Tanjung Pura;TRUE
+hospital_69;RS PTP II TG Selamat;;rs;Pdg Tualang Langkat;TRUE
+hospital_70;RS Pertamina P.Brandan;;rs;Jl. Lhok Sukun Puraka P Brandan;TRUE
+hospital_71;RSU Dr Fl Tobing Sibolga;;rsu;Jl. Dr FL Tobing 35 Sibolga;TRUE
+hospital_72;RS Rem 023 Sibolga;;rs;Jl. Sisingamangaraja Sibolga;TRUE
+hospital_73;RSU Tanjung Balai;;rsu;Jl. Mayjen Sutoyo Tanjung Balai;TRUE
+hospital_74;RS Islam Al Karim;;rs;Jl. Makam No.17 Tg Balai;TRUE
+hospital_75;RS PTP VIII Balimbingan;;rs;Balimbing Pematang Siantar;TRUE
+hospital_76;RSU Pematang Siantar;;rsu;Jl. Sutomo No.230 P Siantar;TRUE
+hospital_77;RS Rem 021 P Siantar;;rs;Jl. Gn Simanuk Manuk P Siantar;TRUE
+hospital_78;RS Harapan;;rs;Jl. Lpg Bola Atas 21 P Siantar;TRUE
+hospital_79;RS Vita Insani;;rs;Jl. Merdeka No.329 P Siantar;TRUE
+hospital_80;RS Humanitas;;rs;Jl. Asahan 105 Pematang Siantar;TRUE
+hospital_81;RS Manuela;;rs;Jl. Sisingamangaraja P Siantar;TRUE
+hospital_82;RS Kasih Sayang;;rs;Jl. Jawa No.61 P Siantar Sumut;TRUE
+hospital_83;RS Mina Padi;;rs;Jl. Medan Km 10 P Siantar Sumut;TRUE
+hospital_84;RSU Tebing Tinggi;;rsu;Jl. Dr K. Pane Tebing Tinggi;TRUE
+hospital_85;RS PTP III Sri Pamela;;rs;Jl. Jend.Sudirman Tebing Tinggi;TRUE
+hospital_86;RS Herna Tebing Tinggi;;rs;Jl. Balai Kota No. 2 T. Tinggi;TRUE
+hospital_87;RSU Dr Pirngadi;;rsu;Jl. Prof H.M.Yamin, SH 47 Medan;TRUE
+hospital_88;RS PTP IX Tembakau;;rs;Jl. Putri Hijau No. 15 Medan;TRUE
+hospital_89;RS Dam II Medan;;rs;Jl. Putri Hijau 17 Medan;TRUE
+hospital_90;RS Polda Sumut;;rs;Jl. KH Wahid Hasyim No.1 Medan;TRUE
+hospital_91;RS Deli;;rs;Jl. Merbabu No.18 Medan;TRUE
+hospital_92;RS Santa Elisabet Medan;;rs;Jl. Haji Misbah No.7 Medan;TRUE
+hospital_93;RS Herna;;rs;Jl. Majapahit 118A Medan;TRUE
+hospital_94;RS Advent Medan;;rs;Jl. Gatot Subroto Km 4 Medan;TRUE
+hospital_95;RS Amal Mulia;;rs;Jl. Dolok Sanggul No. 5 Medan;TRUE
+hospital_96;RS Dewi Maya;;rs;Jl. Surakarta No.2 Medan;TRUE
+hospital_97;RS Methodist;;rs;Jl. Thamrin No. 105 Medan;TRUE
+hospital_98;RS Materna;;rs;Jl. Teuku Umar No.9-11 Medan;TRUE
+hospital_99;RS AL Belawan;;rs;Jl. Bengkalis Belawan Medan;TRUE
+hospital_100;RS Lanu Dr ABD Malik;;rs;Jl. Iman Bonjol No.1 Medan;TRUE
+hospital_101;RS Islam Malahayati;;rs;Jl. Diponegoro No.4 Medan;TRUE
+hospital_102;RS Glugur;;rs;Jl. Glugur No. 140-142 Medan;TRUE
+hospital_103;RS Ellyah;;rs;Jl. Gedung Arca 49 Medan;TRUE
+hospital_104;RS Sari Mutiara;;rs;Jl. Kapten Muslim 79 Medan;TRUE
+hospital_105;RS Sama Ria;;rs;Jl. Sumatera 88 Belawan Medan;TRUE
+hospital_106;RS Jiwa Bina Atma;;rs;Jl. Cokroaminoto No.122 Medan;TRUE
+hospital_107;RS Jiwa Medan;;rs;Jl. Tali Air 21 P. Bulian Medan;TRUE
+hospital_108;RS Kusta Pulau Sicanang;;rs;Jl. Pulus Sicanang Belawan Medan;TRUE
+hospital_109;RS Hisarma;;rs;Jl. Gatot Subroto 108 Medan;TRUE
+hospital_110;RS Sari Cipta;;rs;Jl. Medan Belawan Km 16.3 Medan;TRUE
+hospital_111;RS Bhakti;;rs;Jl. HM Joni No.64 Medan;TRUE
+hospital_112;RS Pel Belawan I Bahagia;;rs;Jl. Sumatera Belawan Medan;TRUE
+hospital_113;RSU Imelda;;rsu;Jl. Bilal No.103 Medan;TRUE
+hospital_114;RSU Martha Friska;;rsu;Jl. Yos Sudarso Km 6 Medan;TRUE
+hospital_115;RS Melati;;rs;Jl. Timor No.27D Medan;TRUE
+hospital_116;RSU H Adam Malik;;rsu;Jl. Bunga Lau No.17 Medan;TRUE
+hospital_117;RS Renata Sakti;;rs;Jl. Pesantren S.Sekambing Medan;TRUE
+hospital_118;RSU Bina Sejahtera;;rsu;Jl. Simpang Kantor Labuan Medan;TRUE
+hospital_119;RS Alqadri;;rs;Jl. Binjai Km 7 No, 237 Medan;TRUE
+hospital_120;RS Permata Bunda;;rs;Jl. Sisingamangaraja No.17 Medan;TRUE
+hospital_121;RSIA Sri Ratu;;rsia;Jl. Nibung Raya No.204 Medan;TRUE
+hospital_122;RSU Martondi;;rsu;Jl. Letda Sujono No.80-82 Medan;TRUE
+hospital_123;RSU Sarah;;rsu;Jl. Baja Raya No.10 Medan;TRUE
+hospital_124;RS Sehat;;rs;Jl. Letda Sujono No.20 E Medan;TRUE
+hospital_125;RS Mayasari;;rs;Rengas Pulau, Medan Lbh, Medan;TRUE
+hospital_126;RS Monginsidi;;rs;Jl. Monginsidi No.11 Medan;TRUE
+hospital_127;RS Bina Persada Medan;;rs;Jl. Letjen Djamin Ginting Medan;TRUE
+hospital_128;RS Bandung;;rs;Jl. Mistar Medan Sumut;TRUE
+hospital_129;RSIA Rosiva;;rsia;Medan;TRUE
+hospital_130;RSU Haji Medan;;rsu;Jl. RS Haji Medan Estate Medan;TRUE
+hospital_131;RSIA Badrul Aini;;rsia;Jl. Bromo Gg Sukri No 18 Medan;TRUE
+hospital_132;RSIA Bunda Zahara;;rsia;Jl. Yos Sudarso No.209 K Medan;TRUE
+hospital_133;RS Bahagia Medan;;rs;Jl. Bahagaia 85 Ds Teladan Medan;TRUE
+hospital_134;RS Wulan Windy;;rs;Rengas Pulau, Marelan Medan;TRUE
+hospital_135;RS Estoalhi;;rs;Jl. Sisisngamangaraja 235 Medan;TRUE
+hospital_136;RSU Binjai;;rsu;Jl. Sultan Hasanuddin 9 Binjai;TRUE
+hospital_137;RS PTP IX Bangkatan;;rs;Jl. Hasanuddin Binjai;TRUE
+hospital_138;RS Rem 023 Binjai;;rs;Jl. Ismail No.15 Binjai;TRUE
+hospital_139;RS Serasi Malem Binjai;;rs;Jl. Iman Bonjol No.205 Binjai;TRUE
+hospital_140;RSU Painan;;rsu;Jl. Dr A rivai Painan;TRUE
+hospital_141;RSU Muara Labuh;;rsu;Jl. Raya Km.1 Muara Labuh Solok;TRUE
+hospital_142;RSU Prof Dr M A Hanafi;;rsu;Jl. Bundo Kandung Batusangkar;TRUE
+hospital_143;RSU Pariaman;;rsu;Jl. Prof M. Yamin, SH Pariaman;TRUE
+hospital_144;RSU Lubuk Basung;;rsu;Jl. Padang Baru Lubuk Basung;TRUE
+hospital_145;RSU Suliki;;rsu;Suliki Kab Lima Puluh Kota;TRUE
+hospital_146;RSU Lubuk Sikaping;;rsu;Jl. Jen Sudirman Lubuk Sikaping;TRUE
+hospital_147;RS Islam Ibnu Sina;;rs;Ds Simpang Ampat Kab Pasaman;TRUE
+hospital_148;RSU Dr M Jamil;;rsu;Jl. Perintis Kemerdekaan Padang;TRUE
+hospital_149;RS Dr Reksodiwiryo;;rs;Jl. Dr Wahidin Padang;TRUE
+hospital_150;RS Yos Sudarso;;rs;Jl. Situjuh No.1 Padang;TRUE
+hospital_151;RSB An-Nisa;;rsb;Jl. Pemuda No.18 Padang;TRUE
+hospital_152;RS Islam Ibnu Sina;;rs;Jl. .Gajah Mada Padang;TRUE
+hospital_153;RS Restu Ibu;;rs;Jl. Proklamasi No.31 Padang;TRUE
+hospital_154;RS Aisyiah Muhammadiyah;;rs;Jl.H A Salim No.6 Padang;TRUE
+hospital_155;RS Polda Sumbar;;rs;Jl. Jati 1 Padang;TRUE
+hospital_156;RSB Sari;;rsb;Jl. Belakang Olo No.49 Padang;TRUE
+hospital_157;RS Jiwa Puti Bungsu;;rs;Jl. H Agus Salim 38 Padang;TRUE
+hospital_158;RSB Bunda Padang;;rsb;Jl. Gajah Mada No.35 Padang;TRUE
+hospital_159;RS Selaguri;;rs;Jl. A Yani No.26 Padang;TRUE
+hospital_160;RS Mata Oculer;;rs;Jl. Sawahan No.69 Padang;TRUE
+hospital_161;RS PT Semen Padang;;rs;Indarung Padang;TRUE
+hospital_162;RS Jiwa Padang;;rs;Jl. Ulu Gadut Padang;TRUE
+hospital_163;RS Jantung Sumbar;;rs;Jl. K.H. Sulaiman;TRUE
+hospital_164;RS Mata Perintis;;rs;Jl. P Kemerdekaan No.71 Padang;TRUE
+hospital_165;RSB Lenggogeni;;rsb;Jl. Purus II No.1 Padang;TRUE
+hospital_166;RS Mata Sitawa;;rs;Jl. Kartini No.17 Padang;TRUE
+hospital_167;RSK Bedah Ropanasuri;;rsk;Jl. Aur No.8 Padang;TRUE
+hospital_168;RS Selasih;;rs;Jl. Khatib Sulaiman 72 Padang;TRUE
+hospital_169;RSU Padang;;rs;Jl. Sungai Sapih Padang;TRUE
+hospital_170;RSB Ananda;;rs;Jl. Bandar Purus No. 29;TRUE
+hospital_171;RSU Asri;;rs;Jl. R.M. Hatta no. 59;TRUE
+hospital_172;RSU Solok;;rsu;Jl. Simpang Rumbio Solok;TRUE
+hospital_173;RSU Sawah Lunto;;rsu;Jl. Kartini 18 Sawah Lunto;TRUE
+hospital_174;RSU Sungai Dareh;;rsu;Jl. Lts Sumatera Km 2 P Panjang;TRUE
+hospital_175;RSU Padang Panjang;;rsu;Jl. KHA Dahlan 5 Padang Panjang;TRUE
+hospital_176;RS Ibnu Sina Pd Panjang;;rs;Jl. Sukarno Hatta Pdg.Panjang;TRUE
+hospital_177;RSU Dr Achmad Mochtar;;rsu;Jl. Dr A Rivai Bukittinggi;TRUE
+hospital_178;RS Rem 032 Bukittinggi;;rs;Jl. Jend Sudirman 37 Bukittinggi;TRUE
+hospital_179;RSU Pusat Bukittinggi;;rsu;Jl. Jend Sudirman Bukittinggi;TRUE
+hospital_180;RS Ibnu Sina Bukittinggi;;rs;Jl. Belakang Balok Bukittinggi;TRUE
+hospital_181;RSU Madina;;rs;Jl. Qum Hamzah No. 17;TRUE
+hospital_182;RSU Dr Adnaan WD;;rsu;Jl. AIS Nasution 25 Payakumbuh;TRUE
+hospital_183;RSU Ibnu Sina Payakumbuh;;rsu;Jl. Pemuda No. 19 Payakumbuh;TRUE
+hospital_184;RSUD Taluk Kuantan;;rsu;Jl. Kesehatan No. 71;TRUE
+hospital_185;RSU Indrasari Rengat;;rsu;Jl. .Belila Pematang Reba Rgt;TRUE
+hospital_186;RSU Puri Husada;;rsu;Jl. Veteran 13 Hilir Tembilahan;TRUE
+hospital_187;RSU Langsa;;rsu;Jl. Jen.A.Yani No.1 Langsa;TRUE
+hospital_188;RSUD Siak;;rsu;Jl. Sultan Syarif Qosim;TRUE
+hospital_189;RSUD Bagansiapiapi;;rsu;Jl. Dr Pratomo 1 Bagansiapiapi;TRUE
+hospital_190;RSU Bangkinang;;rsu;Jl. A Rahman Saleh Bangkinang;TRUE
+hospital_191;RSU PTPN V Tandun;;rsu;Kab. Kampar Kec. Tapung;TRUE
+hospital_192;RS PTP V Kebun Sei Rokan;;rs;Sei Rokan Kab Kampar;TRUE
+hospital_193;RSU Bengkalis;;rsu;Jl. Jend A Yani Bengkalis;TRUE
+hospital_194;RSU Tanjung Pinang;;rsu;Jl. Sudirman 795 Tanjung Pinang;TRUE
+hospital_195;RSU AL Dr Midiyato S;;rs;Jl. Ciptadi No.1 Tanjung Pinang;TRUE
+hospital_196;RSU Aneka Tambang Bauksi;;rs;Jl. Kesehatan C No.36 Tg.Pinang;TRUE
+hospital_197;RSU Lanu Ranai;;rs;Natuna Kab Kepulauan Riau;TRUE
+hospital_198;RSU Bhakti Timah Tg Balai;;rs;Jl. Canggai Putri Teluk Uma Tg. Balai;TRUE
+hospital_199;RSU Pekanbaru;;rsu;Jl. Diponegoro No.2 Pekanbaru;TRUE
+hospital_200;RSU Rem 031 Pekanbaru;;rs;Jl. Kesehatan No.4 Pekanbaru;TRUE
+hospital_201;RSU Kepolisian Pekanbaru;;rs;Jl. Kartini No.14 Pekanbaru;TRUE
+hospital_202;RSU Caltex CPI Rumbai;;rs;Jl. Rumbai Pekanbaru;TRUE
+hospital_203;RSU Santa Maria Pekanbr;;rs;Jl. A Yani No. 68 Pekanbaru;TRUE
+hospital_204;RSU Islam Ibnu Sina;;rs;Jl. Melati No.90 Pekanbaru;TRUE
+hospital_205;RS Jiwa Pusat Pekanbaru;;rs;Jl. H.R. Subrantas Km. 12.5 Pekan Baru;TRUE
+hospital_206;RSU Yayasan Abdurrab;;rs;Jl. Jend Sudirman 410 Pekanbaru;TRUE
+hospital_207;RSU Bina Kasih;;rs;Jl. Samanhudi No.3-5 Pekanbaru;TRUE
+hospital_208;RSU Lanu Pekanbaru;;rs;Jl. Adi Sucipto Pekan Baru;TRUE
+hospital_209;RSU Awal Bros Pekan Baru;;rs;Jl. Jend. Sudirman No. 117 Pekan Baru;TRUE
+hospital_210;RSU Pita Insani Pekan Bar;;rs;Jl. Ronggo Warsito No. 40 Pekan Baru;TRUE
+hospital_211;RSIA Eria Bunda;;rs;Jl. Kh Ahmad Dahlan No. 163 Pekan Baru;TRUE
+hospital_212;RSU Harapan Bunda Batam;;rs;Jl. Seraya No.1 Batam;TRUE
+hospital_213;RSU Otorita Batam;;rs;Jl. Dr Cipto Mangunkusumo Sekupang Batam;TRUE
+hospital_214;RSK Anak Permata Hati;;rs;Jl. Bunga Raya no.3A/3B Batam;TRUE
+hospital_215;RSU Pertamina Dumai;;rs;Jl. Raya Bukit Datuk Dumai;TRUE
+hospital_216;RSU Putri Tujuh Dumai;;rs;Jl. Yos Sudarso No. 1 Dumai Riau;TRUE
+hospital_217;RSU Dumai;;rs;Jl. Tanjung jati No. 4 Dumai;TRUE
+hospital_218;RSU Sungai Penuh;;rsu;Jl. Basuki Rahmat;TRUE
+hospital_219;RS PTP VIII Kayu Aro;;rs;Kayu Aro Sei Penuh Kab Kerinci;TRUE
+hospital_220;RSK Bedah Yayasan Bundo;;rsk;Jl. Pancasila 5 Sungai Penuh;TRUE
+hospital_221;RSU Bangko;;rsu;Jl. Kesehatan Bangko;TRUE
+hospital_222;RS Pertamina Bajubang;;rs;Lapangan Jambi Bajubang;TRUE
+hospital_223;RSU Muara Bulian;;rsu;Jl. Dr Srisudewi Muara Bulian;TRUE
+hospital_224;RSU Kuala Tungkal;;rsu;Jl. Syarif H Kuala Tungkal;TRUE
+hospital_225;RSU Muara Bungo;;rsu;Jl. Teuku Umar Muara Bungo;TRUE
+hospital_226;RS Jiwa Jambi;;rs;Kenali Besar Km 9,5 Jambi;TRUE
+hospital_227;RSU Jambi;;rsu;Jl. Letjen Suprapto Jambi;TRUE
+hospital_228;RS Rem 042 Jambi;;rs;Jl. Raden Mattaher 33 Jambi;TRUE
+hospital_229;RS Polisi Jambi;;rs;Jl. Raden Mathahir No.3 Jambi;TRUE
+hospital_230;RS Santa Theresia;;rs;Jl. Dr Sutomo 19 Jambi;TRUE
+hospital_231;RS Budhi Graha;;rs;Jl. Setiabudi 5 Jambi;TRUE
+hospital_232;RSU Manna;;rsu;Jl. Fatmawati S Manna;TRUE
+hospital_233;RSU Curup;;rsu;Jl. Basuki Rachmad Curup;TRUE
+hospital_234;RSU Arga Makmur;;rsu;Jl. Siti Khadijah Arga Makmur;TRUE
+hospital_235;RSU Dr M Yunus Bengkulu;;rsu;Jl. Hibrida Sidomulyo Bengkulu;TRUE
+hospital_236;RS Jiwa Bengkulu;;rs;Jl. Lingkar Barat Bengkulu;TRUE
+hospital_237;RSU Rafflesia;;rsu;Jl. Mahoni No.10 Bengkulu;TRUE
+hospital_238;RS Tentara Bengkulu;;rs;Jl. Zainal Arifin Bengkulu;TRUE
+hospital_239;RSU Baturaja;;rsu;Jl. Dr Moh Hatta 1 baturaja;TRUE
+hospital_240;RS St Antonio;;rs;Jl. Komisaris Umar 33 Baturaja;TRUE
+hospital_241;RS Panti Bhaktiningsih;;rs;Tegal Rejo Belitang Kab Oku;TRUE
+hospital_242;RSU Kayuagung;;rsu;Jl. Letnan Marzuki Kayu Agung;TRUE
+hospital_243;RSU Prabumulih;;rsu;Jl. AK Gani No.41 Prabumulih;TRUE
+hospital_244;RS Pertamina Prabumulih;;rs;Jl. Kesehatan Prabumulih;TRUE
+hospital_245;RS PT Taba Bukit Asam;;rs;Jl. Raya Bukit Asam Tg Enim;TRUE
+hospital_246;RSU Muara Enim;;rsu;Jl. Lematang No.84 Muara Enim;TRUE
+hospital_247;RSAB Bunda Prabumulih;;rsab;Jl. Dulumbin 756 Prabumulih;TRUE
+hospital_248;RSU Lahat;;rsu;Jl. Mayor Ruslan I No.28 Lahat;TRUE
+hospital_249;RS Dim 0405 Lahat;;rs;Jl. Mayor Ruslan I No.26 Lahat;TRUE
+hospital_250;RSU Lubuk Linggau;;rsu;Jl. Kesehatan Lubuk Linggau;TRUE
+hospital_251;RS Siti Aisyah;;rs;Tabapingin Lubuk Linggau;TRUE
+hospital_252;RSU Sekayu;;rsu;Jl. Dr Selamat 241 Sekayu;TRUE
+hospital_253;RSU Dr Mohammad Hoesin;;rsu;Jl. Jend Sudirman Palembang;TRUE
+hospital_254;RS Pertamina Plaju;;rs;Komp Pertamina Plaju Palembang;TRUE
+hospital_255;RS Dr AK Gani;;rs;Jl. SM Badaruddin II Palembang;TRUE
+hospital_256;RS PT Pusri Palembang;;rs;Jl. Mayor M Zen Palembang;TRUE
+hospital_257;RS Charitas;;rs;Jl. Sudirman 1054 Palembang;TRUE
+hospital_258;RS Jiwa Palembang;;rs;Jl. Kol. H Barlian Km 6 Palembang;TRUE
+hospital_259;RS Kusta Sungai Kundur;;rs;Pos Mariana 30763 Palembang;TRUE
+hospital_260;RS Siti Khadijah;;rs;Jl. Demang Lebar Daun Palembang;TRUE
+hospital_261;RS Boom Baru;;rs;Boom Baru Palembang;TRUE
+hospital_262;RSB Bunda;;rsb;Jl. Demang Lebar Daun Palembang;TRUE
+hospital_263;RSB Tiara Fatrin;;rsb;Jl. Rajawali 495-596 Palembang;TRUE
+hospital_264;RSU Palembang Bari;;rsu;Jl. P Usada Seb Ulu Palembang;TRUE
+hospital_265;RS Myria Palembang;;rs;Jl. Kol H Barlian Km 7 Palembang;TRUE
+hospital_266;RSU Pangkalpinang;;rsu;Jl. M Syafri Rachman Pk Pinang;TRUE
+hospital_267;RS Bakti Timah;;rs;Jl. Bukit Baru Pangkal Pinang;TRUE
+hospital_268;RSU Sungailiat;;rsu;Jl. Jend Sudirman 195 Sungai Liat;TRUE
+hospital_269;RS Jiwa SungaiLiat;;rs;Jl. Jend Sudirman Sungai Liat;TRUE
+hospital_270;RSU Tanjung Pandan;;rsu;Jl. Jend Sudirman Tanjung Pandan;TRUE
+hospital_271;RSU Liwa;;rsu;Liwa Kab Lampung Barat;TRUE
+hospital_272;RSU Pringsewu;;rsu;Jl. Kesehatan 1360 Pringsewu;TRUE
+hospital_273;RSU Kalianda;;rsu;Jl. Lettu Rohani 14B Kalianda;TRUE
+hospital_274;RS Islam Umbul Thoif;;rs;Jl. Pemanggilan Matar Lampung Selatan;TRUE
+hospital_275;RSD Sukadana *;;rs;Jl. Lintas Timur Mataram Marga Sukadana;TRUE
+hospital_276;RSU May Jend H M Ryacudu;;rsu;Jl. Jend Sudirman No.2 Kotabumi;TRUE
+hospital_277;RS Islam Asy-Syifaa;;rs;Jl. Negara No.56 Lintas Sumatera;TRUE
+hospital_278;RSU Dr H Abdul Moeloek;;rsu;Jl. Dr Rivai No. 6 Bandar Lampung;TRUE
+hospital_279;RS TK. IV 02.07.04;;rs;Jl. Dr Rivai No. 7 Bandar Lampung;TRUE
+hospital_280;RSB Restu Ibu;;rsb;Jl. KH Hasyim Ashari 73 Bandar Lampung;TRUE
+hospital_281;RS Urip Sumoharjo;;rs;Jl. Urip Sumoharjo No. 200 B. Lampung;TRUE
+hospital_282;RS Jiwa Bandar Lampung;;rs;Jl. Raya Gedong Tataan Km. 13 B. Lampun;TRUE
+hospital_283;RS Immanuel Way Halim;;rs;Jl. Sukarno Hatta B.Lampung;TRUE
+hospital_284;RS Mata Permana Sari;;rs;Jl. HOS Cokroaminoto No. 87 B. Lampung;TRUE
+hospital_285;RSU Bumi Waras;;rsu;Jl. W Monginsidi No. 235 B. Lampung;TRUE
+hospital_286;RSU Advent Bandar Lampung;;rsu;Jl.Teuku Umar No. 48 Bandar Lampung;TRUE
+hospital_287;RSU Jend Achmad Yani;;rsu;Jl. Jend A Yani Metro;TRUE
+hospital_288;RS Mardi Waluyo;;rs;Jl. Jend Sudirman No.128 Metro;TRUE
+hospital_289;RS Islam Metro;;rs;Jl. A.H. Nasution No. 250 Metro;TRUE
+hospital_290;RSU Pandeglang;;rsu;Jl. Kesehatan No.1 Pandeglang;TRUE
+hospital_291;RSU Dr Adjidarmo;;rsu;Jl. Alun-alun Utara 1 Rangkasbitung;TRUE
+hospital_292;RS Misi Lebak;;rs;Jl. Multatuli 41 Rangkasbitung;TRUE
+hospital_293;RS Antam Emas Cikotok;;rs;Cikotok Kec Cibeber Kab Lebak;TRUE
+hospital_294;RS Dim 0506 Tangerang;;rs;Jl. Daan Mogot 59 Tangerang;TRUE
+hospital_295;RSAB Sari Asih;;rsab;Jl. Imam Bonjol Karawaci Tangerang;TRUE
+hospital_296;RS Q a d r;;rs;Komp Islamic Village Curug Tangerang;TRUE
+hospital_297;RSIA Lestari;;rsia;Jl. Cireundeu Indah 3 Tangerang;TRUE
+hospital_298;RS Islam Asshobirin;;rs;Jl. Raya Serpong Km 11 Tangerang;TRUE
+hospital_299;RS Honoris;;rs;Jl. Honoris Boulevard Tangerang;TRUE
+hospital_300;RS Siloam Gleneagles;;rs;Jl. Siloan Lippo Karawaci Tangerang;TRUE
+hospital_301;RSK Bhineka Bakti Husada;;rsk;Jl. Cabe Raya 17 Pamulang Tangerang;TRUE
+hospital_302;RSU Serang;;rsu;Jl. RSU No.1 Serang;TRUE
+hospital_303;RS Rem 064 Serang;;rs;Jl. A Yani 23 Serang;TRUE
+hospital_304;RSU Tangerang;;rsu;Jl. A yani No.9 Tangerang;TRUE
+hospital_305;RS Makna;;rs;Jl. Cileduk Raya Tangerang;TRUE
+hospital_306;RS Kusta Sitanala;;rs;Jl. Dr Sitanala Tangerang;TRUE
+hospital_307;RS Usada Insani;;rs;Jl. Raya Cipondoh 24 Tangerang;TRUE
+hospital_308;RS Krakatau Steel;;rs;Jl. Semang Raya Cilegon;TRUE
+hospital_309;RSU Fatmawati;;rsu;Jl. RS Fatmawati Cilandak Jaksel;TRUE
+hospital_310;RS Pusat Pertamina;;rs;Jl.Kyai Maja No. 43 Jakarta Selatan;TRUE
+hospital_311;RS Dareal 3 Cilandak;;rsu;Jl. Raya Cilandak Ragunan;TRUE
+hospital_312;RS Jakarta;;rs;Jl. Jend Sudirman Kav 49 Jaksel;TRUE
+hospital_313;RSJ Dharmawangsa;;rsk;Jl. Dharmawangsa Raya No. 13 Blok P II;TRUE
+hospital_314;RSB Panti Nugeraha;;rsk;Jl. Senayan No. 26 Kby Baru Jaksel;TRUE
+hospital_315;RSB Budhi Jaya;;rsk;Jl. Dr Sahardjo 120 Jaksel;TRUE
+hospital_316;RS Kebayoran;;rs;Jl.Birah III/4 Keb Baru Jaksel;TRUE
+hospital_317;RSB Asih;;rsk;Jl. Panglima Polim i/34 Jaksel;TRUE
+hospital_318;RS Mata PDIS Aini;;rsk;Jl. HR Rasuna Said Jaksel;TRUE
+hospital_319;RS Ketergantungan Obat;;rsk;Jl. RS FatmawatiCilandak;TRUE
+hospital_320;RS Setia Mitra;;rs;Jl. Fatmawati No.80-82 Jaksel;TRUE
+hospital_321;RS Tebet;;rs;Jl. Haryono MT No.8 Jaksel;TRUE
+hospital_322;RS Pondok Indah;;rs;Jl. Metro Duta Kav. UE;TRUE
+hospital_323;RS MMC;;rs;Jl. HR Rasuna Said Kav. C-21;TRUE
+hospital_324;RS THT Bedah Yay Yurino;;rsk;Jl. Ciranjang II No.20-22 Jaksel;TRUE
+hospital_325;RSU Prikasih;;rsu;Jl. RS Fatmawati Raya 74 Jaksel;TRUE
+hospital_326;RSU Gandaria;;rsu;Jl. Gandaria Tengah II/12-14 Kby Baru;TRUE
+hospital_327;RS Agung;;rs;Jl. Sultan Agung No.67 Jaksel;TRUE
+hospital_328;RS Siaga Raya;;rs;Jl. Siaga Raya Kav. 4-8;TRUE
+hospital_329;RS Pasar Minggu;;rs;Jl. Raya Ragunan P7 Jaksel;TRUE
+hospital_330;RS Medistra;;rs;Jl. Gatot Subroto Kav 59 Jaksel;TRUE
+hospital_331;RS Indah Medika;;rs;Jl. Tebet Raya No.4-8 Jaksel;TRUE
+hospital_332;RSU Tria Dipa;;rsu;Jl. Raya Pasar Minggu 3A Jaksel;TRUE
+hospital_333;RSB Duren Tiga;;rsk;Jl. PLN no. 5 Duren Tiga;TRUE
+hospital_334;RSU Persahabatan;;rsu;Jl. Raya Persahabatan Jaktim;TRUE
+hospital_335;RSU Budhi Asih;;rsu;Jl. Dewi Sartika No. 200 Jaktim;TRUE
+hospital_336;RS LPK Cipinang;;rsk;Jl. Raya Bekasi Timur 170 Jaktim;TRUE
+hospital_337;RS Pusdikkes;;rsu;Jl. Raya Bogor, Kramat Jati Jakarta Tim;TRUE
+hospital_338;RS Kepolisian Pusat;;rsu;Jl. RS Polri Kramat Jati Jakarta Timur;TRUE
+hospital_339;RS Kesdam Jaya Cijantung;;rsu;Jl. Mahoni Cijantung II Jaktim;TRUE
+hospital_340;RS UKI Cawang;;rsu;Jl. May.Jend Soetoyo Jaktim;TRUE
+hospital_341;RSU Pasar Rebo;;rsu;Jl. TB Simatupang No. 30 Jaktim;TRUE
+hospital_342;RS Mitra Keluarga;;rsu;Jl. Jatinegara Timur No. 87 Jaktim;TRUE
+hospital_343;RSIA Hermina;;rsia;Jl. Jatingara Barat No. 126 Jaktim;TRUE
+hospital_344;RS Ongkomulyo M C;;rsu;Jl. Pulo Mas Barat VI/20 Jaktim;TRUE
+hospital_345;RS Islam Jakarta Timur;;rsu;Jl. Raya Pondok Kopi Jaktim;TRUE
+hospital_346;RSU Kartika Pulo Mas;;rsu;Jl. Pulo Mas Barat IV C/1 Jaktim;TRUE
+hospital_347;RSU H a r u m;;rsu;Jl. Tarum Barat Kalimalang;TRUE
+hospital_348;RS Harapan Jayakarta;;rsu;Jl. Bekasi Timur Km 18 No.6 Jaktim;TRUE
+hospital_349;RS Harapan Bunda;;rsu;Jl. Raya Bogor Km 22 No. 24 Jaktim;TRUE
+hospital_350;RSIA Yadika;;rsu;Jl. Pahlawan Revolusi No. 47 Pd. Bambu;TRUE
+hospital_351;RSB Yayasan Restu;;rsk;Jl. Raya Bogor Km.19 No. 3;TRUE
+hospital_352;RS Dharma Nugraha;;rsu;Jl. Balai Pustaka Baru No. 19 Jaktim;TRUE
+hospital_353;RS Mediros;;rsu;Jl. Perintis Kemerdekaan Kav. 149;TRUE
+hospital_354;RSU Haji Jakarta;;rsu;Jl. Raya Pondok Gede No. 4;TRUE
+hospital_355;RSJ Islam Bunga Rampai;;rsk;Jl. Bunga Rampai X Klender;TRUE
+hospital_356;RS PAU Antariksa;;rsu;Jl. Merpati No. 2 Halim P.K.;TRUE
+hospital_357;RS Bedah Rawamangun;;rsk;Jl. Balai Pustaka Raya No. 29-31;TRUE
+hospital_358;RS Duren Sawit;;rsk;Jl. Duren Sawit Baru No. 2;TRUE
+hospital_359;RSU Dr Cipto Mangunkusumo;;rsu;Jl. Diponegoro No. 71 Jakarta Pusat;TRUE
+hospital_360;RS PAD Gatot Soebroto;;rsu;Jl.Dr A. Rahman Saleh 24 Jakpus;TRUE
+hospital_361;RS AL Dr Mintoharjo;;rsu;Jl. Bendungan Hilir No. 117 Jakpus;TRUE
+hospital_362;RS Husada;;rsu;Jl. Mangga Besar Raya 137/139 Jakpus;TRUE
+hospital_363;RS Sint Carolus;;rsu;Jl. Salemba Raya No. 41 Jakpus;TRUE
+hospital_364;RS PGI Cikini;;rsu;Jl. Raden Saleh No. 40 Jakpus;TRUE
+hospital_365;RS Islam Pusat Jakarta;;rsu;Jl. Cempaka Putih Tengah I/1 Jakpus;TRUE
+hospital_366;RS Moh Ridwan Meuraksa;;rsu;Jl. Kramat Raya No. 174 Jakpus;TRUE
+hospital_367;RSB Budi Kemuliaan;;rsk;Jl. Budi Kemuliaan No.25 Jakpus;TRUE
+hospital_368;RSB Yy Pem Kesehatan;;rsk;Jl. Gereja Theresia No. 22 Jakpus;TRUE
+hospital_369;RSIA Bunda;;rsk;Jl.Teuku Cik Ditiro No. 28 Jakpus;TRUE
+hospital_370;RS Jiwa Dharma Jaya;;rsk;Jl. Mangga Besar Raya 138 Jakpusk;TRUE
+hospital_371;RSK Bedah Kramat Lima;;rsk;Jl. Kramat V No.6 Jakpus;TRUE
+hospital_372;RSIA Evasari;;rsk;Jl. Rawamangun No.47 Jakpus;TRUE
+hospital_373;RS Pertamina Jaya;;rsu;Jl. A. Yani No.2 Jakarta Pusat;TRUE
+hospital_374;RS Jiwa Dharma Sakti;;rsk;Jl. Kaji No. 40 Petojo;TRUE
+hospital_375;RS Moh Husni Thamrin;;rsu;Jl. Salemba Tengah 26-28 Jakpus;TRUE
+hospital_376;RS.THT Panti Raharja;;rsk;Jl. Sawo No.58-60 Jakpus;TRUE
+hospital_377;RSU Tarakan;;rsu;Jl. Kyai Caringin No. 7 Jakarta Pusat;TRUE
+hospital_378;RSK THT Bedah Proklamasi;;rsk;Jl. Proklamasi No,43 Jakarta Pusat;TRUE
+hospital_379;RS Abdi Waluyo;;rsu;Jl. HOS Cokroaminoto No. 33 Jakpus;TRUE
+hospital_380;RS Kramat 128;;rsu;Jl. Kramat Raya No. 128 Jakpus;TRUE
+hospital_381;RSK THT Prof Nizar;;rsk;Jl. Kesehatan No.9 Jakpus;TRUE
+hospital_382;RS Mata Jkt Eye Centre;;rsk;Jl. Teuku Cik Ditiro 46 Jakpus;TRUE
+hospital_383;RSK Bedah Bina Estetika;;rsk;Jl. Teuku Cik Ditiro No. 41 Jakpus;TRUE
+hospital_384;RSJ Menteng Mitra Afia;;rsu;Jl. Kali Pasir No. 9;TRUE
+hospital_385;RS Mitra Kemayoran;;rsu;Jl. Landas Pacu Timur Kemayoran;TRUE
+hospital_386;RSIA Puri Medika;;rsk;Jl. Sungai Bambu No. 5A;TRUE
+hospital_387;RS Sumber Waras;;rsu;Jl. Kyai Tapa Grogol Jakbar;TRUE
+hospital_388;RS Pelni Petamburan;;rsu;Jl. KS Tubun No. 92-94 Jakbar;TRUE
+hospital_389;RS Trisna Pangastuti;;rsu;Jl. KS Tubun 79 Slipi Jakbar;TRUE
+hospital_390;RS Jiwa Jakarta;;rsk;Jl. Dr Latumeten No.1 Jakbar;TRUE
+hospital_391;RS Kanker Dharmais;;rsk;Jl. S Parman Kav. 84-86 Jakarta Barat;TRUE
+hospital_392;RS AB Harapan Kita;;rsk;Jl. S Parman Kav 87 Jakbar;TRUE
+hospital_393;RS Jantung Harapan Kita;;rsk;Jl. S Parman Kav 87 Jakbar;TRUE
+hospital_394;RS Graha Medika;;rsk;Jl. Raya Perjuangan Kebun Jeruk;TRUE
+hospital_395;RSK Bedah Chandera;;rsk;Jl. Raya Mangga Besar No. 40 Jakbar;TRUE
+hospital_396;RSU Al-Kamal;;rsu;Jl. Raya Al-Kamal No. 2 Kedoya;TRUE
+hospital_397;RS Manuela;;rsu;Jl. Mangga Besar VIII/23 Jakbar;TRUE
+hospital_398;RS Patria IKKT;;rsu;Jl. Cenderawasih No. 1 Komp. Hankam;TRUE
+hospital_399;RS Medika Permata Hijau;;rsu;Jl. Kebayoran Lama No.64 Jakbar;TRUE
+hospital_400;RSUD Cengkareng;;rsud;Perumnas Bumi Cengkareng Indah;TRUE
+hospital_401;RSIA Hermina Cengkareng;;rsk;Jl. Kintamani Raya No. 2 Daan Mogot;TRUE
+hospital_402;RSU Koja;;rsu;Jl. Deli No.4 Tg.Priok Jakut;TRUE
+hospital_403;RS Akademik Atma Jaya;;rsu;Jl. Pluit Raya No. 2 Jakarta Utara;TRUE
+hospital_404;RS Pelabuhan Jakarta;;rsu;Jl. Kramat Jaya Tg.Priok Jakut;TRUE
+hospital_405;RSPI Prof Dr Sulianti S;;rsk;Jl. Baru Sunter Permai Raya Jakut;TRUE
+hospital_406;RS Sukmul Sisma Medika;;rsu;Jl.Tawes No. 18 -20 Jakarta Utara;TRUE
+hospital_407;RSB Hermina Podomoro;;rsk;Jl. Danau Agung II No 28 Sunter Jakut;TRUE
+hospital_408;RS Sunter Agung;;rsu;Jl. Agung Utara Raya Blok A No.1 Jakut;TRUE
+hospital_409;RS Islam Sukapura;;rsu;Jl. Tipar Cakung No.5 Jakut;TRUE
+hospital_410;RS Medika Griya;;rsu;Jl. Danau Sunter Utara Raya No. 1 Jakut;TRUE
+hospital_411;RS Pluit;;rsu;Jl. Raya Pluit Selatan No. 2 Jakut;TRUE
+hospital_412;RS Pantai Indah Kapuk;;rsu;Jl. Pantai Indah Kapuk Utara 3 Blok T;TRUE
+hospital_413;RS Mitra Keluarga Klp Gdg;;rsu;Jl. Bukit Gading Raya Kav. 2;TRUE
+hospital_414;RSIA Family;;rsk;Jl. Pluit Mas I Blok A No. 2A-5A;TRUE
+hospital_415;RS TP Cisarua;;rs;Jl. Raya Puncak Cisarua Bogor;TRUE
+hospital_416;RSU Cibinong;;rsu;Cipayung Kec Cibinong Bogor;TRUE
+hospital_417;RS Gunung Salak;;rs;Jl. Cibungbulang Leuwiliang;TRUE
+hospital_418;RSU Ciawi;;rsu;Jl. Raya Puncak 479 Ciawi Bogor;TRUE
+hospital_419;RS Bina Husada;;rs;Jl. Mayor Oking Km 01 Cibinong;TRUE
+hospital_420;RSU Sekarwangi;;rsu;Jl. Siliwangi Cibadak Sukabumi;TRUE
+hospital_421;RS Islam Sukabumi;;rs;Jl. Cibolang Cisaat Sukabumi;TRUE
+hospital_422;RSU Pelabuhan Ratu;;rsu;Jl. Rumah Sakit Pelabuhan Ratu;TRUE
+hospital_423;RSU Cianjur;;rsu;Jl. Rumah Sakit No.1 Cianjur;TRUE
+hospital_424;RSB Al-Afiah;;rsb;Jl. Siti Jenab 49 Cianjur;TRUE
+hospital_425;RSU Majalaya;;rsu;Jl. Cipaku No.35 Paseh Majalaya;TRUE
+hospital_426;RSU Cimahi;;rsu;Jl. Raya Cibabat No.140 Cimahi;TRUE
+hospital_427;RS Dustira;;rs;Jl. Rumah Sakit No.1 Cimahi;TRUE
+hospital_428;RS Jiwa Cimahi;;rs;Jl. Kol Masturi Cimahi;TRUE
+hospital_429;RS Max I Salhuteru;;rs;Kec Ciwidey Kab Bandung;TRUE
+hospital_430;RS Asadyra Cimahi;;rs;Jl. Raya Cibabat No.341 Cimahi;TRUE
+hospital_431;RS Islam Al Ihsan;;rs;Jl. Bale Endah Kab Bandung;TRUE
+hospital_432;RSU Soreang;;rsu;Jl. Alun-alun Utara Soreang;TRUE
+hospital_433;RSU Dr Slamet;;rsu;Jl. Rumah Sakit Garut;TRUE
+hospital_434;RS Rem 062 Guntur;;rs;Jl. Bratayuda 101 Garut;TRUE
+hospital_435;RSU Tasikmalaya;;rsu;Jl. Rumah Sakit 33 Tasikmalaya;TRUE
+hospital_436;RSB Pamela;;rsb;Jl. Tentara Pelajar Tasikmalaya;TRUE
+hospital_437;RS Islam Tasikmalaya;;rsu;Jl. Tamansari Gobras Tasikmalaya;TRUE
+hospital_438;RSU Ciamis;;rsu;Jl. Pahlawan No.62 Ciamis;TRUE
+hospital_439;RSU Banjar;;rsu;Banjar Kab Ciamis;TRUE
+hospital_440;RSU Kuningan;;rsu;Jl. Sudirman No.68 Kuningan;TRUE
+hospital_441;RS Wijaya Kusumah;;rs;Jl. RE Martadinata 136 Kuningan;TRUE
+hospital_442;RS Sekar Kemulyan;;rs;Jl. Cigugur Kuningan;TRUE
+hospital_443;RSU Waled;;rsu;Jl. Kesehatan No.1 Waled;TRUE
+hospital_444;RS Pertamina Klayan;;rs;Jl. Raya Klayan Cirebon;TRUE
+hospital_445;RS TP Sidawangi;;rs;Jl. Sumber-Mandirancan Cirebon;TRUE
+hospital_446;RSU Arjawinangun;;rsu;Jl. Pahlawan No.38 Arjawinangun;TRUE
+hospital_447;RSU Majalengka;;rsu;Jl. Kesehatan No.82 Majalengka;TRUE
+hospital_448;RSU Cideres;;rsu;Jl. Raya Cideres 180 Majalengka;TRUE
+hospital_449;RSU Sumedang;;rsu;Jl. Palasari No.80 Sumedang;TRUE
+hospital_450;RSU Indramayu;;rsu;Jl. Letjen Haryono MT Indramayu;TRUE
+hospital_451;RSU Subang;;rsu;Jl. Brigjen Katamso 37 Subang;TRUE
+hospital_452;RS Islam Zam Zam;;rs;Jl. Letnan Joni Jatibarang;TRUE
+hospital_453;RS PTP VIII Subang;;rs;Jl. Otista No.1 Subang;TRUE
+hospital_454;RS Lanu Kalijati;;rs;Lanud Kalijati Subang;TRUE
+hospital_455;RSU Bayu Asih;;rsu;Jl. Veteran No.39 Purwakarta;TRUE
+hospital_456;RS Dit Lis PO Jatiluhur;;rs;Jatilihur Kab Purwakarta;TRUE
+hospital_457;RSU Karawang;;rsu;Jl. Dr Taruno Karawang;TRUE
+hospital_458;RSU Bayukarta;;rsu;Jl. Kertabumi No.44 Karawang;TRUE
+hospital_459;RS Dewi Sri;;rs;Jl. Arif Rahman Hakim Karawang;TRUE
+hospital_460;RSU Bekasi;;rsu;Jl. Pramuka No.55 Bekasi;TRUE
+hospital_461;RSU Mitra Keluarga Bekasi;;rsu;Jl. Raya A Yani Bekasi;TRUE
+hospital_462;RSU Mekar Sari;;rsu;Jl. Mekar Sari No.1 Bekasi;TRUE
+hospital_463;RS Bhakti Husada;;rs;Jl. By Pass Cikarang Bekasi;TRUE
+hospital_464;RS Karya Medika;;rs;Jl. Raya Cibitung Bekasi;TRUE
+hospital_465;RS Budi Lestari;;rs;Jl. Raya Kalimalang Bekasi;TRUE
+hospital_466;RS Karya Husada;;rs;Jl. Jend A Yani no.89 Cikampek;TRUE
+hospital_467;RSU PMI Bogor;;rsu;Jl. Raya Pajajaran No.80 Bogor;TRUE
+hospital_468;RS Rem 061 Salak Bogor;;rs;Jl. Jend Sudirman No.6-8 Bogor;TRUE
+hospital_469;RS Lanud Atang Senjaya;;rs;Jl. Raya Semplak Bogor;TRUE
+hospital_470;RSJ Dr H Marzoeki Mahdi;;rsj;Jl. Dr Semeru No.114 Bogor;TRUE
+hospital_471;RS Azra;;rs;Jl. Raya Pajajaran 219 Bogor;TRUE
+hospital_472;RS Karya Bakti;;rs;Jl. Dr Semeru 120 Bogor;TRUE
+hospital_473;RSU R Syamsudin SH;;rsu;Jl. Rumah Sakit No.1 Sukabumi;TRUE
+hospital_474;RS Secapa Polri;;rs;Jl. Bhayangkara No.166 Sukabumi;TRUE
+hospital_475;RSIA Ridogalih;;rsia;Jl. Gudang No.24 Sukabumi;TRUE
+hospital_476;RSU Assyifa Sukabumi;;rsu;Jl. Jend Sudirman 27 Sukabumi;TRUE
