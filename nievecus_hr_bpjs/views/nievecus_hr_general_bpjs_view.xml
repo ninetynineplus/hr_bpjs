@@ -43,6 +43,7 @@
                                      <field name="name" string="BPJS Name"/>
                                      <field name="parent_id" string="Parent BPJS" />
                                      <field name="type" string="Type"/>
+                                     <field name="type_kesehatan" string="is Type Health?"/>
                                 </group>
                                 <group>
                                     <field name="type_contribution_employee" string="Employee"/>

@@ -35,6 +35,7 @@ class HrEmployeeGeneralBpjs(models.Model):
     type_contribution_employee = fields.Boolean('Contribution Type')
     type_contribution_company = fields.Boolean('Contribution Type')
     penalty = fields.Boolean('Bpjs Penalty')
+    type_kesehatan = fields.Boolean('Type BPJS Kesehatan')
     type = fields.Selection([('view','View'),('normal','Normal')],'Type',defaults='view')
 
     @api.multi

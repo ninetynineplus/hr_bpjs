@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="nievecus_form_illness_action2">
+            <field name="name">Form Ilness</field>
+            <field name="res_model">nievecus.form.illness</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="nievecus_form_medical_record_action2">
+            <field name="name">Form Medical Record</field>
+            <field name="res_model">nievecus.form.medical</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="inherit_hr_employee_form_illness">
+            <field name="name">inherit HR employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[@class='oe_button_box']" position="inside">
+                     <button name="act_show_log_form_illness"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-hospital-o"
+                                >
+                         <field name="count_form_illness" widget="statinfo" string="Illness"/>
+                     </button>
+
+                     <button name="act_show_log_form_medical"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-stethoscope"
+                                >
+                         <field name="count_form_medical" widget="statinfo" string="Medical Record"/>
+                     </button>
+                 </xpath>
+            </field>
+        </record>
+
+        <record id="nievecus_hr_indonesia_employee_inherit_form_illness" model="ir.ui.view">
+            <field name="name">HR Indonesia Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='personal_information']/group" position="inside">
+                    <group string="Medical Record">
+                        <field name="last_medical" string="Last Medical"/>
+                        <field name="last_blood_type" string="Blood Type"/>
+                        <field name="last_cholesterol" string="Cholesterol"/>
+                        <field name="last_employee_blood_presure" string="Blood Presure"/>
+                        <field name="last_employee_height" string="Height"/>
+                        <field name="last_employee_weight" string="Weight"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

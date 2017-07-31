@@ -1,0 +1,152 @@
+<odoo>
+    <data>
+        <!-- View Tree: Path -->
+        <record id="hr_employee_form_medical_view_tree" model="ir.ui.view">
+            <field name="name">nievecus.form.medical</field>
+            <field name="model">nievecus.form.medical</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Medical ">
+                     <field name="name" string="Name"/>
+                     <field name="date_record" string="Date"/>
+                     <field name="employee_id" string="Employee"/>
+                     <field name="department_id" string="Department" />
+                     <field name="job_id" string="Job" />
+                     <field name="age_employee" string="Age"/>
+                     <field name="publisher_medical" string="Publisher"/>
+                     <field name="employee_blood" string="Blood"/>
+                     <field name="employee_cholesterol_HDL" string="Cholesterol HDL"/>
+                     <field name="employee_cholesterol_VLDL" string="Cholesterol VLDL"/>
+                     <field name="employee_glukose" string="Glukose"/>
+                     <field name="employee_uric_acid" string="Uric Acid"/>
+                     <field name="employee_blood_presure" string="Blood Presure"/>
+                     <field name="height_employee" string="Height"/>
+                     <field name="weight_employee" string="Weight"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- View Form: Path -->
+        <record id="hr_employee_form_medical_view_form" model="ir.ui.view">
+            <field name="name">nievecus.form.medical</field>
+            <field name="model">nievecus.form.medical</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" colors="blue">
+                             <h1>
+                                 <label string="Form Illness"/>
+                             </h1>
+                        </div>
+                            <group col = '2'>
+                                 <group>
+                                     <field name="name" string="Name"/>
+                                     <field name="employee_id" string="Employee"/>
+                                     <field name="department_id" string="Department" />
+                                     <field name="job_id" string="Job" />
+                                     <field name="age_employee" string="Age"/>
+                                     <field name="publisher_medical" string="Publisher"/>
+                                     <field name="date_record" string="Date"/>
+                                </group>
+                                <group>
+                                     <field name="employee_blood" string="Blood"/>
+                                     <field name="employee_cholesterol_HDL" string="Cholesterol HDL"/>
+                                     <field name="employee_cholesterol_VLDL" string="Cholesterol VLDL"/>
+                                     <field name="employee_cholesterol_LDL" string="Cholesterol LDL"/>
+                                     <field name="employee_glukose" string="Glukose"/>
+                                     <field name="employee_uric_acid" string="Uric Acid"/>
+                                     <field name="employee_blood_presure" string="Blood Presure"/>
+                                     <field name="height_employee" string="Height"/>
+                                     <field name="weight_employee" string="Weight"/>
+                                </group>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- View Search: Path -->
+        <record id="hr_employee_form_medical_view_search" model="ir.ui.view">
+            <field name="name">nievecus.form.medical</field>
+            <field name="model">nievecus.form.medical</field>
+            <field name="arch" type="xml">
+                <search string="Search Employee drive_license">
+                     <field name="name" string="Name"/>
+                     <field name="date_record" string="Date"/>
+                     <field name="employee_id" string="Employee"/>
+                     <field name="department_id" string="Department" />
+                     <field name="job_id" string="Job" />
+                     <field name="age_employee" string="Age"/>
+                     <field name="publisher_medical" string="Publisher"/>
+                     <field name="employee_blood" string="Blood"/>
+                     <field name="employee_cholesterol_HDL" string="Cholesterol HDL"/>
+                     <field name="employee_cholesterol_VLDL" string="Cholesterol VLDL"/>
+                     <field name="employee_glukose" string="Glukose"/>
+                     <field name="employee_uric_acid" string="Uric Acid"/>
+                     <field name="employee_blood_presure" string="Blood Presure"/>
+                     <field name="height_employee" string="Height"/>
+                     <field name="weight_employee" string="Weight"/>
+                    <separator/>
+                    <separator/>
+                    <filter name="filter_month" icon="terp-go-month" string="This Month"
+                            domain="[('date_record','&lt;=',(context_today()+relativedelta(day=31)).strftime('%%Y-%%m-%%d')),
+                            ('date_record','&gt;=',(context_today()-relativedelta(day=1)).strftime('%%Y-%%m-%%d'))]"/>
+                    <filter name="filter_year" icon="terp-go-year" string="This Year"
+                            domain="[('date_record','&lt;=',(context_today()+relativedelta(day=31, month=12)).strftime('%%Y-%%m-%%d')),
+                            ('date_record','&gt;=',(context_today()-relativedelta(day=1, month=1)).strftime('%%Y-%%m-%%d'))]"/>
+                    <separator/>
+                    <filter icon="terp-go-month" string="Previous Month"
+                            domain="[('date_record','&lt;=',(context_today()+relativedelta(months=0,day=1,days=-1)).strftime('%Y-%m-%d')),
+                            ('date_record','&gt;=',(context_today()+relativedelta(months=-1,day=1)).strftime('%Y-%m-%d'))]"/>
+                    <!-- Relativedelta required weeks, days and weekday -->
+                    <filter icon="terp-go-month" string="Previous Week"
+                            domain="[('date_record','&lt;=',(context_today()+relativedelta(weeks=-2, days=7, weekday=6)).strftime('%Y-%m-%d')),
+                            ('date_record','&gt;=',(context_today()+relativedelta(weeks=-2, days=1, weekday=0)).strftime('%Y-%m-%d'))]"/>
+                    <separator/>
+
+                    <group expand="0" string="Group By...">
+                        <filter name="by_month" string="Month"
+                                context="{'group_by': 'date_record:month'}"/>
+                        <filter name="by_week" string="Week"
+                                context="{'group_by': 'date_record:week'}"/>
+                        <filter name="by_date" string="Date"
+                                context="{'group_by': 'date_record:day'}"/>
+                        <filter string="Employee" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter string="Department" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'department_id'}"/>
+                        <filter string="Job" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'job_id'}"/>
+                        <filter string="Publisher" icon="terp-gtk-jump-to-rtl" domain="[]" context="{'group_by':'publisher_medical'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_employee_form_medical_action" model="ir.actions.act_window" >
+            <field name="name">Form Illness</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">nievecus.form.medical</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="hr_employee_form_medical_view_search"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to start a new Form Medical Configuration.
+              </p><p>
+                A Form Medical Configuration is an master to set Form Medical for employee.
+              </p>
+            </field>
+        </record>
+
+
+        <!-- Menu: Path -->
+
+        <menuitem
+            id="hr_employee_form_medical_menu_action"
+            name="Medical Record Form"
+            parent="hr_employee_parent_medical_menu_root"
+            action="hr_employee_form_medical_action"
+            sequence="10"
+        />
+    </data>
+</odoo>
