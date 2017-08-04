@@ -14,8 +14,8 @@
         You can assign several BPJS per employee.
     """,
 
-    'author': "Arya and Mahroza",
-    'website': "http://www.yourcompany.com",
+    'author': "Ninetynine Plus",
+    'website': "http://www.ninetynine-plus.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
